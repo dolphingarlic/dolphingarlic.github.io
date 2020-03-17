@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://bits-and-bytes.netlify.com').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Bits and Bytes">
+<meta property="og:url" content="https://bits-and-bytes.netlify.com/index.html">
+<meta property="og:site_name" content="Bits and Bytes">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Andi Qu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://bits-and-bytes.netlify.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>Bits and Bytes</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bits and Bytes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>Sitemap</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/dolphingarlic" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://bits-and-bytes.netlify.com/2020/03/17/BOI-2015-Editor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andi Qu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bits and Bytes">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/17/BOI-2015-Editor/" class="post-title-link" itemprop="url">BOI 2015 Editor</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-17 18:20:42 / Modified: 19:54:28" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/03/17/BOI-2015-Editor/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/17/BOI-2015-Editor/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>2.6k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Today, I’d like to share another really cool programming problem. This problem is <a href="https://oj.uz/problem/view/BOI15<sub>e</sub>di" target="_blank" rel="noopener">Editor</a> from the 2015 Baltic Olympiad in Informatics.</p>
+<p>Here’s a quick summary of the problem: You’ve invented a text editor where there are 2 operations: <strong>edit</strong> and <strong>undo</strong>. Each operation has a <strong>level</strong>. A <strong>edit</strong> changes the editor state (initially 0) to some new state. An <strong>undo</strong> of <strong>level</strong> $L$ undoes the most recent operation with <strong>level</strong> strictly less than $L$. Note that an <strong>undo</strong> can undo a previous <strong>undo</strong>. Each <strong>edit</strong> has <strong>level</strong> 0 and the user determines the <strong>level</strong> of each <strong>undo</strong>. You’re now given a sequence of $N \leq 10^5$ operations. For each operation, you want to know the character shown on the screen after you apply it.</p>
+<p>For example, we can have the following sequence of operations (E means <strong>edit</strong>; U means <strong>undo</strong>):</p>
+<table>
+<thead>
+<tr>
+<th align="center">Operation</th>
+<th align="center"></th>
+<th align="center">E<sub>1</sub></th>
+<th align="center">E<sub>2</sub></th>
+<th align="center">E<sub>5</sub></th>
+<th align="center">U<sub>1</sub></th>
+<th align="center">U<sub>1</sub></th>
+<th align="center">U<sub>3</sub></th>
+<th align="center">E<sub>4</sub></th>
+<th align="center">U<sub>2</sub></th>
+<th align="center">U<sub>1</sub></th>
+<th align="center">U<sub>1</sub></th>
+<th align="center">E<sub>1</sub></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Editor state</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">5</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<p>The official solution is a persistent trie of some sorts, but it’s long and complicated. Instead, I’ll present an elegant binary lifting solution.</p>
+<p>I’ll focus on <strong>undo</strong> operations in this post, since nothing really happens with <strong>edit</strong> operations other than outputting the answer.</p>
+<h2 id="Observation-1"><a href="#Observation-1" class="headerlink" title="Observation 1"></a>Observation 1</h2><p><strong>For 3 operations $X$, $Y$, $Z$ in order, if $Y$ can’t undo $X$ and $Z$ can’t undo $Y$, then $Z$ can’t undo $X$.</strong></p>
+<p>This observation is pretty obvious and doesn’t seem very helpful at first, but it will become useful later on.</p>
+<p>Before we move on though, view each operation as a node in a graph. If $Y$ undoes $X$, draw an edge between $Y$ and $X - 1$ and let $P_Y = X - 1$.</p>
+<p>Notice how the answer for $Y$ is simply the answer for $P_Y$. Additionally, our graph is a forest.</p>
+<p>The graph for the above test case would look like:</p>
+<img src="/2020/03/17/BOI-2015-Editor/graph.png" class="" title="Graph">
+
+<h2 id="Observation-2"><a href="#Observation-2" class="headerlink" title="Observation 2"></a>Observation 2</h2><p><strong>If $Y$ can’t undo $X$, then $Y$ can’t undo any operation in the range $(P_X, X]$.</strong></p>
+<p>This is because $P_X + 1$ is the most recent active operation $X$ could undo. The states of the operations in the range $(P_X, X]$ also remain unchanged after applying operation $X$, so by observation 1, this is true. (This still holds when we undo some operations.)</p>
+<h2 id="Observation-3"><a href="#Observation-3" class="headerlink" title="Observation 3"></a>Observation 3</h2><p><strong>By observation 2, the operation we undo must lie on some path from the most recent operation upwards!</strong></p>
+<p>We essentially want the most recent operation with level strictly less than the current <strong>undo</strong>. We can use suffix minimums and binary lifting to find this operation.</p>
+<p>The time complexity is $O(N log N)$ and this gets us 100 points.</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, x, y) for (int i = x; i &lt; y; i++)</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> anc[<span class="number">300001</span>][<span class="number">20</span>], mn[<span class="number">300001</span>][<span class="number">20</span>], ans[<span class="number">300001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            ans[i] = x;</span><br><span class="line">            anc[i][<span class="number">0</span>] = i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            x = -x;</span><br><span class="line">            <span class="keyword">int</span> curr = i - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">19</span>; ~j; j--) <span class="keyword">if</span> (mn[curr][j] &gt;= x) curr = anc[curr][j];</span><br><span class="line">            anc[i][<span class="number">0</span>] = curr - <span class="number">1</span>;</span><br><span class="line">            ans[i] = ans[curr - <span class="number">1</span>];</span><br><span class="line">            mn[i][<span class="number">0</span>] = x;</span><br><span class="line">            FOR(j, <span class="number">1</span>, <span class="number">20</span>) &#123;</span><br><span class="line">                anc[i][j] = anc[anc[i][j - <span class="number">1</span>]][j - <span class="number">1</span>];</span><br><span class="line">                mn[i][j] = min(mn[i][j - <span class="number">1</span>], mn[anc[i][j - <span class="number">1</span>]][j - <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>) <span class="built_in">cout</span> &lt;&lt; ans[i] &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://bits-and-bytes.netlify.com/2020/01/05/JOI-2013-Synchronisation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andi Qu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bits and Bytes">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/05/JOI-2013-Synchronisation/" class="post-title-link" itemprop="url">JOI 2013 Synchronisation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-05 15:51:34" itemprop="dateCreated datePublished" datetime="2020-01-05T15:51:34+02:00">2020-01-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-17 18:21:31" itemprop="dateModified" datetime="2020-03-17T18:21:31+02:00">2020-03-17</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/01/05/JOI-2013-Synchronisation/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/01/05/JOI-2013-Synchronisation/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>4.8k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Today, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is <a href="https://oj.uz/problem/view/JOI13_synchronization" target="_blank" rel="noopener">Synchronisation</a> from the 2013 Open Contest.</p>
+<p>Here’s a quick summary of the problem: You have $N \leq 10^5$ computers and $N - 1$ connections that form a tree. Initially, all connections are inactive and all computers hold a single unique piece of information. Each time the connection between computers $A$ and $B$ is activated, the computers connected to $A$ and $B$ (including $A$ and $B$) sync up and share information. The states of the connections are changed $M \leq 10^5$ times and you would like to know how many unique pieces of information are stored on each computer at the end.</p>
+<p>There are many ways to solve this problem (I know of 4 distinct ways), but I’ll share what I think is the most elegant solution, which relies on more observations and has relatively light implementation.</p>
+<p>Let’s solve this problem subtask by subtask, just as we would in an actual competition!</p>
+<h2 id="Subtask-2"><a href="#Subtask-2" class="headerlink" title="Subtask 2"></a>Subtask 2</h2><p>Subtask 2 is by far the easiest. Here, the network is simply a straight line.</p>
+<p>Notice that the range of the information on each computer is a single contiguous interval. Coincidentally, so is the connected component any computer is part of. Knowing this, we can simply use a segment tree with lazy propagation to merge these ranges over an interval whenever we connect 2 computers.</p>
+<p>The time complexity is $O(N \log N)$, which gets us 20 points.</p>
+<h2 id="Subtask-1"><a href="#Subtask-1" class="headerlink" title="Subtask 1"></a>Subtask 1</h2><p>Subtask 1 is very similar to the general problem, with the key difference being that we only have to answer 1 query.</p>
+<p>Naturally, we’d like to root the tree at the queried node. For convenience, let this node be node 1.</p>
+<p>Notice that for each connected component has a single node with minimum depth (kinda like the “root” of the connected subtree). This means that instead of storing information in each node of a component, we can simply store the information in that “root”!</p>
+<p>Specifically, let $a_i$ be 1 for each node $i$. When we merge nodes $u$ and $v$ (where $u$ is the parent of $v$), $v$ is its component’s “root”, so we can simply apply<br>$$a_{root[u]} \to a_{root[u]} + a_v, a_v \to 0$$</p>
+<p>After doing this, $a_1$ is the answer to the query. This intuitively works because we would like to “bubble” information up to node 1, which we do by shifting “fresh” information up to the root of a component. Notice how this always results in $a_v = 0$ if $v$ isn’t a root.</p>
+<p>Now how do we find the root of a component quickly?</p>
+<p>Notice how the root $u$ of node $v$ is simply the lowest node where there are no active connections between $u$ and $v$. We can find the number of active connections between the root and a node using a DFS-order traversal and a Fenwick tree. This feels very similar to finding the LCA of two nodes, so we can simply apply binary lifting to find the root in $O(\log N)$.</p>
+<p>The time complexity is again $O(N \log N)$, which gets us an additional 20 points.</p>
+<h2 id="Subtask-3"><a href="#Subtask-3" class="headerlink" title="Subtask 3"></a>Subtask 3</h2><p>The solution to this subtask comes naturally from that of subtask 1.</p>
+<p>Let $c_v$ be the amount of data that was last synced between $v$ and its parent and let $a_v$ be the amount of information currently in $v$. When we connect $u$ and $v$, the new amount of data on both computers is thus $a_v + a_u - c_v$.</p>
+<p>This means that we don’t have to set $a_v$ to 0 anymore when we sync it! Now we can simply root the tree arbitrarily and apply our approach for subtask 1 - only now we also keep track of $c_v$ and don’t set $a_v$ to 0.</p>
+<p>The answer to each query $v$ is thus simply $a_{root[v]}$.</p>
+<p>The time complexity is yet again $O(N \log N)$, which gets us 100 points.</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, x, y) for (int i = x; i &lt; y; i++)</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, q;</span><br><span class="line"><span class="keyword">bool</span> active[<span class="number">100001</span>];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; graph[<span class="number">100001</span>];</span><br><span class="line">pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; edges[<span class="number">200001</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> info[<span class="number">100001</span>], last_sync[<span class="number">100001</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// DFS order</span></span><br><span class="line"><span class="keyword">int</span> timer = <span class="number">1</span>, tin[<span class="number">100001</span>], tout[<span class="number">100001</span>];</span><br><span class="line"><span class="comment">// Binary lifting parents</span></span><br><span class="line"><span class="keyword">int</span> anc[<span class="number">100001</span>][<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> node = <span class="number">1</span>, <span class="keyword">int</span> parent = <span class="number">0</span>)</span> </span>&#123;</span><br><span class="line">    anc[node][<span class="number">0</span>] = parent;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">20</span> &amp;&amp; anc[node][i - <span class="number">1</span>]; i++) &#123;</span><br><span class="line">        anc[node][i] = anc[anc[node][i - <span class="number">1</span>]][i - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    info[node] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    tin[node] = timer++;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : graph[node]) <span class="keyword">if</span> (i != parent) dfs(i, node);</span><br><span class="line">    tout[node] = timer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Fenwick tree</span></span><br><span class="line"><span class="keyword">int</span> bit[<span class="number">100001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> pos, <span class="keyword">int</span> val)</span> </span>&#123; <span class="keyword">for</span> (; pos &lt;= n; pos += (pos &amp; (-pos))) bit[pos] += val; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> pos)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (; pos; pos -= (pos &amp; (-pos))) ans += bit[pos];</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Binary lifting</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find_ancestor</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> lca = node;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">19</span>; ~i; i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (anc[lca][i] &amp;&amp; query(tin[anc[lca][i]]) == query(tin[node])) lca = anc[lca][i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> lca;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; q;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; edges[i].first &gt;&gt; edges[i].second;</span><br><span class="line">        graph[edges[i].first].push_back(edges[i].second);</span><br><span class="line">        graph[edges[i].second].push_back(edges[i].first);</span><br><span class="line">    &#125;</span><br><span class="line">    dfs();</span><br><span class="line"></span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>) &#123;</span><br><span class="line">        update(tin[i], <span class="number">-1</span>);</span><br><span class="line">        update(tout[i], <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (m--) &#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">        <span class="keyword">int</span> u = edges[x].first, v = edges[x].second;</span><br><span class="line">        <span class="keyword">if</span> (anc[u][<span class="number">0</span>] == v) swap(u, v);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (active[x]) &#123;</span><br><span class="line">            info[v] = last_sync[v] = info[find_ancestor(u)];</span><br><span class="line">            update(tin[v], <span class="number">-1</span>);</span><br><span class="line">            update(tout[v], <span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            info[find_ancestor(u)] += info[v] - last_sync[v];</span><br><span class="line">            update(tin[v], <span class="number">1</span>);</span><br><span class="line">            update(tout[v], <span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        active[x] = !active[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (q--) &#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; info[find_ancestor(x)] &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Andi Qu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dolphingarlic" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dolphingarlic" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:andi@andiqu.com" title="E-Mail → mailto:andi@andiqu.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/profile.php?id=100008200278280" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008200278280" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/andi._.rainbows" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;andi._.rainbows" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://andiqu.com/" title="https:&#x2F;&#x2F;andiqu.com" rel="noopener" target="_blank">My Website</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Andi Qu</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="Symbols count total">7k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">7 mins.</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://bits-and-bytes-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+
+</body>
+</html>
