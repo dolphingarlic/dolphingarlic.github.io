@@ -19,7 +19,7 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    hostname: new URL('https://bits-and-bytes.netlify.com').hostname,
+    hostname: new URL('http://bits-and-bytes.me').hostname,
     root: '/',
     scheme: 'Mist',
     version: '7.7.0',
@@ -48,13 +48,13 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Bits and Bytes">
-<meta property="og:url" content="https://bits-and-bytes.netlify.com/tags/BOI/index.html">
+<meta property="og:url" content="http://bits-and-bytes.me/tags/BOI/index.html">
 <meta property="og:site_name" content="Bits and Bytes">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Andi Qu">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://bits-and-bytes.netlify.com/tags/BOI/">
+<link rel="canonical" href="http://bits-and-bytes.me/tags/BOI/">
 
 
 <script id="page-configurations">
@@ -68,6 +68,15 @@
 
   <title>Tag: BOI | Bits and Bytes</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114696886-4"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-114696886-4');
+      }
+    </script>
 
 
 
@@ -141,7 +150,7 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-categories"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">

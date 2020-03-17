@@ -19,7 +19,7 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    hostname: new URL('https://bits-and-bytes.netlify.com').hostname,
+    hostname: new URL('http://bits-and-bytes.me').hostname,
     root: '/',
     scheme: 'Mist',
     version: '7.7.0',
@@ -49,21 +49,21 @@
   <meta name="description" content="IntroductionToday, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invente">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BOI 2015 Editor">
-<meta property="og:url" content="https://bits-and-bytes.netlify.com/2020/03/17/BOI-2015-Editor/index.html">
+<meta property="og:url" content="http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/index.html">
 <meta property="og:site_name" content="Bits and Bytes">
 <meta property="og:description" content="IntroductionToday, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invente">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://bits-and-bytes.netlify.com/2020/03/17/BOI-2015-Editor/graph.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/graph.png">
 <meta property="article:published_time" content="2020-03-17T16:20:42.000Z">
-<meta property="article:modified_time" content="2020-03-17T17:54:28.049Z">
+<meta property="article:modified_time" content="2020-03-17T18:14:23.491Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="BOI">
 <meta property="article:tag" content="Programming">
 <meta property="article:tag" content="Olympiad">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://bits-and-bytes.netlify.com/2020/03/17/BOI-2015-Editor/graph.png">
+<meta name="twitter:image" content="http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/graph.png">
 
-<link rel="canonical" href="https://bits-and-bytes.netlify.com/2020/03/17/BOI-2015-Editor/">
+<link rel="canonical" href="http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/">
 
 
 <script id="page-configurations">
@@ -77,6 +77,15 @@
 
   <title>BOI 2015 Editor | Bits and Bytes</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114696886-4"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-114696886-4');
+      }
+    </script>
 
 
 
@@ -150,7 +159,7 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-categories"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -192,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="https://bits-and-bytes.netlify.com/2020/03/17/BOI-2015-Editor/">
+    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -216,7 +225,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-03-17 18:20:42 / Modified: 19:54:28" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
+              <time title="Created: 2020-03-17 18:20:42 / Modified: 20:14:23" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
             </span>
 
           
@@ -301,14 +310,14 @@
 <p>This observation is pretty obvious and doesn’t seem very helpful at first, but it will become useful later on.</p>
 <p>Before we move on though, view each operation as a node in a graph. If $Y$ undoes $X$, draw an edge between $Y$ and $X - 1$ and let $P_Y = X - 1$.</p>
 <p>Notice how the answer for $Y$ is simply the answer for $P_Y$. Additionally, our graph is a forest.</p>
-<p>The graph for the above test case would look like:</p>
+<p>For example, the graph for the above example would look like:</p>
 <img src="/2020/03/17/BOI-2015-Editor/graph.png" class="" title="Graph">
 
 <h2 id="Observation-2"><a href="#Observation-2" class="headerlink" title="Observation 2"></a>Observation 2</h2><p><strong>If $Y$ can’t undo $X$, then $Y$ can’t undo any operation in the range $(P_X, X]$.</strong></p>
 <p>This is because $P_X + 1$ is the most recent active operation $X$ could undo. The states of the operations in the range $(P_X, X]$ also remain unchanged after applying operation $X$, so by observation 1, this is true. (This still holds when we undo some operations.)</p>
 <h2 id="Observation-3"><a href="#Observation-3" class="headerlink" title="Observation 3"></a>Observation 3</h2><p><strong>By observation 2, the operation we undo must lie on some path from the most recent operation upwards!</strong></p>
 <p>We essentially want the most recent operation with level strictly less than the current <strong>undo</strong>. We can use suffix minimums and binary lifting to find this operation.</p>
-<p>The time complexity is $O(N log N)$ and this gets us 100 points.</p>
+<p>The time complexity is $O(N \log N)$ and this gets us 100 points.</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, x, y) for (int i = x; i &lt; y; i++)</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> anc[<span class="number">300001</span>][<span class="number">20</span>], mn[<span class="number">300001</span>][<span class="number">20</span>], ans[<span class="number">300001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            ans[i] = x;</span><br><span class="line">            anc[i][<span class="number">0</span>] = i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            x = -x;</span><br><span class="line">            <span class="keyword">int</span> curr = i - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">19</span>; ~j; j--) <span class="keyword">if</span> (mn[curr][j] &gt;= x) curr = anc[curr][j];</span><br><span class="line">            anc[i][<span class="number">0</span>] = curr - <span class="number">1</span>;</span><br><span class="line">            ans[i] = ans[curr - <span class="number">1</span>];</span><br><span class="line">            mn[i][<span class="number">0</span>] = x;</span><br><span class="line">            FOR(j, <span class="number">1</span>, <span class="number">20</span>) &#123;</span><br><span class="line">                anc[i][j] = anc[anc[i][j - <span class="number">1</span>]][j - <span class="number">1</span>];</span><br><span class="line">                mn[i][j] = min(mn[i][j - <span class="number">1</span>], mn[anc[i][j - <span class="number">1</span>]][j - <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>) <span class="built_in">cout</span> &lt;&lt; ans[i] &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
@@ -610,7 +619,7 @@
       DISQUS.reset({
         reload: true,
         config: {page: {
-            url: "https://bits-and-bytes.netlify.com/2020/03/17/BOI-2015-Editor/",
+            url: "http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/",
             identifier: "2020/03/17/BOI-2015-Editor/",
             title: "BOI 2015 Editor"
           }
