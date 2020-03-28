@@ -150,7 +150,7 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-categories"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -188,6 +188,109 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/03/28/Unusual-types-of-graphs-with-cool-names/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andi Qu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bits and Bytes">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/28/Unusual-types-of-graphs-with-cool-names/" class="post-title-link" itemprop="url">Unusual types of graphs with cool names</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-28 21:16:56 / Modified: 21:28:07" itemprop="dateCreated datePublished" datetime="2020-03-28T21:16:56+02:00">2020-03-28</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/03/28/Unusual-types-of-graphs-with-cool-names/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/28/Unusual-types-of-graphs-with-cool-names/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Recently, I’ve come across some unusual types of graphs while solving problems. These graphs often had funny and/or cool names that I thought described what they look like quite well.</p>
+<p>Today, I’ll share some of these graphs with you (along with some illustrations). If you feel like there are some other cool graphs I should add to this list, please comment them down below.</p>
+<h2 id="Onion"><a href="#Onion" class="headerlink" title="Onion"></a>Onion</h2><p>An onion is a graph where there are exactly 2 nodes with degree greater than 2. Every other node has degree 2. Every simple path between the 2 “endpoints” has equal length.</p>
+<img src="/2020/03/28/Unusual-types-of-graphs-with-cool-names/onion.jpg" class="" title="Onion Graph">
+
+<p>Onions are one of my favourite vegetables in real life, so naturally I quite like them. They’re also quite easo to work with (since one can just find the two “endpoints” and DFS).</p>
+<p>The first (and only) time I used onions was in the 2016 Polish Olympiad in Informatics problem <a href="https://szkopul.edu.pl/problemset/problem/YY6-3ua-C1rt7q-97laWc0UP/site/?key=statement" target="_blank" rel="noopener"><em>Amusing Journeys</em></a>.</p>
+<h2 id="Cactus"><a href="#Cactus" class="headerlink" title="Cactus"></a>Cactus</h2><p>A cactus is a graph where each edge is part of at most 1 simple cycle.</p>
+<img src="/2020/03/28/Unusual-types-of-graphs-with-cool-names/cactus.jpg" class="" title="Cactus Graph">
+
+<p>Personally, I find cacti quite nasty to work with. They’re basically trees but with annoying cycles you have to deal with (just like how cacti are basically trees but toxic and painful to touch in real life). Some people (like Brian Chau) seem to love them for some inexplicable reason though.</p>
+<p>A nice problem that uses cacti is the 2016 Polish Olympiad in Informatics problem <a href="https://szkopul.edu.pl/problemset/problem/y9HM1ctDU8V8xLMRUYACDIRs/site/" target="_blank" rel="noopener"><em>Hydrocontest</em></a>.</p>
+<h2 id="Caterpillar"><a href="#Caterpillar" class="headerlink" title="Caterpillar"></a>Caterpillar</h2><p>A caterpillar is a tree where each node is either part of or exactly 1 edge away from a “central path”.</p>
+<img src="/2020/03/28/Unusual-types-of-graphs-with-cool-names/caterpillar.png" class="" title="Caterpillar Tree">
+<p>(I couldn’t find a nice cartoon caterpillar so here’s a Wikipedia image :P)</p>
+<p>I don’t have much to say about caterpillars. You should check out <a href="http://torus2torus.blogspot.com/2012/10/i-spy-with-my-little-eyea-caterpillar.html" target="_blank" rel="noopener">this other blog I found</a> if you would like to learn more about caterpillars.</p>
+<p>A nice problem that uses them is the 2016 International Olympiad in Informatics problem <a href="https://oj.uz/problem/view/IOI16_shortcut" target="_blank" rel="noopener"><em>Shortcut</em></a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -361,7 +464,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-17 18:21:31" itemprop="dateModified" datetime="2020-03-17T18:21:31+02:00">2020-03-17</time>
+                <time title="Modified: 2020-03-20 21:17:13" itemprop="dateModified" datetime="2020-03-20T21:17:13+02:00">2020-03-20</time>
               </span>
 
           
@@ -506,14 +609,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -572,12 +675,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">7k</span>
+    <span title="Symbols count total">9k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">7 mins.</span>
+    <span title="Reading time total">8 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>

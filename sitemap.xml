@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/</loc>
+    <loc>http://bits-and-bytes.me/2020/03/28/Unusual-types-of-graphs-with-cool-names/</loc>
     
-    <lastmod>2020-03-17T18:14:23.491Z</lastmod>
+    <lastmod>2020-03-28T19:28:07.205Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/categories/index.html</loc>
+    
+    <lastmod>2020-03-20T19:34:42.863Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/2020/01/05/JOI-2013-Synchronisation/</loc>
     
-    <lastmod>2020-03-17T16:21:31.003Z</lastmod>
+    <lastmod>2020-03-20T19:17:13.912Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/</loc>
+    
+    <lastmod>2020-03-17T18:14:23.491Z</lastmod>
     
   </url>
   
