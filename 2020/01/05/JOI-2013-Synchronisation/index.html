@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="IntroductionToday, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is Synchronisation from the 2013 Open Contest. Here’s a quick summary of the">
+  <meta name="description" content="Today, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is Synchronisation from the 2013 Open Contest. Here’s a quick summary of the problem: Yo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JOI 2013 Synchronisation">
 <meta property="og:url" content="http://bits-and-bytes.me/2020/01/05/JOI-2013-Synchronisation/index.html">
 <meta property="og:site_name" content="Bits and Bytes">
-<meta property="og:description" content="IntroductionToday, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is Synchronisation from the 2013 Open Contest. Here’s a quick summary of the">
+<meta property="og:description" content="Today, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is Synchronisation from the 2013 Open Contest. Here’s a quick summary of the problem: Yo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-05T13:51:34.000Z">
-<meta property="article:modified_time" content="2020-03-20T19:17:13.912Z">
+<meta property="article:modified_time" content="2020-04-06T13:46:09.776Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="JOI">
 <meta property="article:tag" content="Programming">
@@ -229,7 +229,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-20 21:17:13" itemprop="dateModified" datetime="2020-03-20T21:17:13+02:00">2020-03-20</time>
+                <time title="Modified: 2020-04-06 15:46:09" itemprop="dateModified" datetime="2020-04-06T15:46:09+02:00">2020-04-06</time>
               </span>
 
           
@@ -271,7 +271,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Today, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is <a href="https://oj.uz/problem/view/JOI13_synchronization" target="_blank" rel="noopener">Synchronisation</a> from the 2013 Open Contest.</p>
+        <p>Today, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is <a href="https://oj.uz/problem/view/JOI13_synchronization" target="_blank" rel="noopener">Synchronisation</a> from the 2013 Open Contest.</p>
 <p>Here’s a quick summary of the problem: You have $N \leq 10^5$ computers and $N - 1$ connections that form a tree. Initially, all connections are inactive and all computers hold a single unique piece of information. Each time the connection between computers $A$ and $B$ is activated, the computers connected to $A$ and $B$ (including $A$ and $B$) sync up and share information. The states of the connections are changed $M \leq 10^5$ times and you would like to know how many unique pieces of information are stored on each computer at the end.</p>
 <p>There are many ways to solve this problem (I know of 4 distinct ways), but I’ll share what I think is the most elegant solution, which relies on more observations and has relatively light implementation.</p>
 <p>Let’s solve this problem subtask by subtask, just as we would in an actual competition!</p>
@@ -382,7 +382,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtask-2"><span class="nav-number">2.</span> <span class="nav-text">Subtask 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtask-1"><span class="nav-number">3.</span> <span class="nav-text">Subtask 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtask-3"><span class="nav-number">4.</span> <span class="nav-text">Subtask 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">5.</span> <span class="nav-text">Code</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtask-2"><span class="nav-number">1.</span> <span class="nav-text">Subtask 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtask-1"><span class="nav-number">2.</span> <span class="nav-text">Subtask 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Subtask-3"><span class="nav-number">3.</span> <span class="nav-text">Subtask 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">4.</span> <span class="nav-text">Code</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -396,14 +396,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -462,12 +462,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">9k</span>
+    <span title="Symbols count total">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">8 mins.</span>
+    <span title="Reading time total">12 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>

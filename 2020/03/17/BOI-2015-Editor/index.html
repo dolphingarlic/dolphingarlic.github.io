@@ -46,16 +46,16 @@
   };
 </script>
 
-  <meta name="description" content="IntroductionToday, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invente">
+  <meta name="description" content="Today, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invented a text edi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BOI 2015 Editor">
 <meta property="og:url" content="http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/index.html">
 <meta property="og:site_name" content="Bits and Bytes">
-<meta property="og:description" content="IntroductionToday, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invente">
+<meta property="og:description" content="Today, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invented a text edi">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://bits-and-bytes.me/2020/03/17/BOI-2015-Editor/graph.png">
 <meta property="article:published_time" content="2020-03-17T16:20:42.000Z">
-<meta property="article:modified_time" content="2020-03-17T18:14:23.491Z">
+<meta property="article:modified_time" content="2020-04-06T13:46:05.164Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="Programming">
 <meta property="article:tag" content="Olympiad">
@@ -223,10 +223,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-03-17 18:20:42 / Modified: 20:14:23" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
+              <time title="Created: 2020-03-17 18:20:42" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-06 15:46:05" itemprop="dateModified" datetime="2020-04-06T15:46:05+02:00">2020-04-06</time>
+              </span>
 
           
   
@@ -267,7 +273,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Today, I’d like to share another really cool programming problem. This problem is <a href="https://oj.uz/problem/view/BOI15<sub>e</sub>di" target="_blank" rel="noopener">Editor</a> from the 2015 Baltic Olympiad in Informatics.</p>
+        <p>Today, I’d like to share another really cool programming problem. This problem is <a href="https://oj.uz/problem/view/BOI15<sub>e</sub>di" target="_blank" rel="noopener">Editor</a> from the 2015 Baltic Olympiad in Informatics.</p>
 <p>Here’s a quick summary of the problem: You’ve invented a text editor where there are 2 operations: <strong>edit</strong> and <strong>undo</strong>. Each operation has a <strong>level</strong>. A <strong>edit</strong> changes the editor state (initially 0) to some new state. An <strong>undo</strong> of <strong>level</strong> $L$ undoes the most recent operation with <strong>level</strong> strictly less than $L$. Note that an <strong>undo</strong> can undo a previous <strong>undo</strong>. Each <strong>edit</strong> has <strong>level</strong> 0 and the user determines the <strong>level</strong> of each <strong>undo</strong>. You’re now given a sequence of $N \leq 10^5$ operations. For each operation, you want to know the character shown on the screen after you apply it.</p>
 <p>For example, we can have the following sequence of operations (E means <strong>edit</strong>; U means <strong>undo</strong>):</p>
 <table>
@@ -412,7 +418,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-1"><span class="nav-number">2.</span> <span class="nav-text">Observation 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-2"><span class="nav-number">3.</span> <span class="nav-text">Observation 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-3"><span class="nav-number">4.</span> <span class="nav-text">Observation 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">5.</span> <span class="nav-text">Code</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-1"><span class="nav-number">1.</span> <span class="nav-text">Observation 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-2"><span class="nav-number">2.</span> <span class="nav-text">Observation 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-3"><span class="nav-number">3.</span> <span class="nav-text">Observation 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">4.</span> <span class="nav-text">Code</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -426,14 +432,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -492,12 +498,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">9k</span>
+    <span title="Symbols count total">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">8 mins.</span>
+    <span title="Reading time total">12 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>

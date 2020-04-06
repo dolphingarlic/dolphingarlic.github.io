@@ -192,6 +192,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/04/06/IOI-2003-Reverse/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andi Qu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bits and Bytes">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/06/IOI-2003-Reverse/" class="post-title-link" itemprop="url">IOI 2003 Reverse</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-06 15:43:57 / Modified: 16:03:19" itemprop="dateCreated datePublished" datetime="2020-04-06T15:43:57+02:00">2020-04-06</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/04/06/IOI-2003-Reverse/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/06/IOI-2003-Reverse/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>3.8k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>3 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>I finally solved <a href="https://contest.yandex.ru/ioi/contest/558/problems/C/" target="_blank" rel="noopener"><em>Reverse</em></a> from IOI 2003! Here’s a brief summary of what the problem is about:</p>
+<p>You have an ancient computer that has 9 registers and 2 operations. Each register can hold an integer from 0 to 255. An <code>S</code> operation in the form <code>S A B</code> sets <code>register[B] = register[A] + 1</code>. A <code>P</code> operation in the form <code>P A</code> simply prints <code>register[B]</code>. You may choose the 9 starting values of the registers.</p>
+<p>Your task is, for a given <code>N</code>, print out <code>N</code>, <code>N - 1</code>, …, <code>0</code> using as few <strong>consecutive</strong> <code>S</code> operations as possible.</p>
+<p>This problem was pretty nice in both concept and implementation… if you were fine with 88 points. If you wanted 100 points though, you had to be a lot more creative.</p>
+<p>The first major hurdle was the fact that the editorial only described a solution that got 88 points. This meant that you couldn’t even just copy the implementation from the editorial.</p>
+<p>The next major hurdle was the fact that Yandex had decreased the limit of consecutive <code>S</code> operations for one test case (<code>N = 97</code>) because some IOI 2003 contestant had found a <code>MAX = 2</code> solution (the official solution was a <code>MAX = 3</code> solution). Other than that, only the <code>MAX = 4</code> cases failed for the 88-point solution.</p>
+<p>The last major hurdle was how few people had actually solved this problem. Prior to me solving it, only 1 person (<a href="https://codeforces.com/profile/Noam527" target="_blank" rel="noopener">Noam Gutterman</a>) had 100 points for it on Yandex. In fact, <a href="https://codeforces.com/blog/entry/66014?#comment-499829" target="_blank" rel="noopener">grandmasters on Codeforces were even doubting the existence of a 100 point solution</a>. Luckily though, I know Noam and was able to ask him for help.</p>
+<p>I don’t have the willpower to explain my solution, but it’s a relatively simple extension of the 88-point solution. Here’s my code if you want to decipher it:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, x, y) for (int i = x; i &lt; y; i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, k, reg[<span class="number">9</span>];</span><br><span class="line"><span class="keyword">int</span> lim[<span class="number">5</span>]&#123;<span class="number">8</span>, <span class="number">44</span>, <span class="number">97</span>, <span class="number">116</span>, <span class="number">257</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">INIT</span><span class="params">(<span class="keyword">int</span> V, <span class="keyword">int</span> P)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, V);</span><br><span class="line">    <span class="keyword">if</span> (P == <span class="number">8</span>) <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">    assert(V &gt; <span class="number">-1</span> &amp;&amp; V &lt; <span class="number">256</span>);</span><br><span class="line">    assert(P &gt; <span class="number">-1</span> &amp;&amp; P &lt; <span class="number">9</span>);</span><br><span class="line">    reg[P] = V;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ADD</span><span class="params">(<span class="keyword">int</span> A, <span class="keyword">int</span> B)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"S %d %d\n"</span>, A + <span class="number">1</span>, B + <span class="number">1</span>);</span><br><span class="line">    assert(A &gt; <span class="number">-1</span> &amp;&amp; A &lt; <span class="number">9</span>);</span><br><span class="line">    assert(B &gt; <span class="number">-1</span> &amp;&amp; B &lt; <span class="number">9</span>);</span><br><span class="line">    reg[B] = reg[A] + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FIND</span><span class="params">(<span class="keyword">int</span> V)</span> </span>&#123; <span class="keyword">return</span> find(reg, reg + <span class="number">9</span>, V) - reg; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PRINT</span><span class="params">(<span class="keyword">int</span> P)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"P %d\n"</span>, P + <span class="number">1</span>);</span><br><span class="line">    assert(P &lt; <span class="number">9</span>);</span><br><span class="line">    assert(reg[P] == n);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;k, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"FILE reverse %d\n"</span>, k);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> mx = lower_bound(lim, lim + <span class="number">8</span>, n) - lim;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (mx == <span class="number">4</span> || mx == <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> c = n, diff1 = (mx == <span class="number">2</span> ? <span class="number">3</span> : <span class="number">9</span>), diff2 = (mx == <span class="number">2</span> ? <span class="number">2</span> : <span class="number">0</span>);</span><br><span class="line">        INIT(c, <span class="number">0</span>);</span><br><span class="line">        INIT(c - mx - <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        c -= mx + <span class="number">1</span>;</span><br><span class="line">        FOR(i, <span class="number">1</span>, <span class="number">8</span>) &#123;</span><br><span class="line">            c -= i * diff1 + diff2;</span><br><span class="line">            INIT(max(c, <span class="number">0</span>), i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> nxt = <span class="number">2</span>, curr, rising = <span class="number">-1</span>;</span><br><span class="line">        <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; to_rise;</span><br><span class="line">        <span class="keyword">bool</span> twice = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        n++;</span><br><span class="line">        <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">            curr = FIND(n);</span><br><span class="line">            PRINT(curr);</span><br><span class="line">            <span class="keyword">if</span> (!n) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> pos = FIND(n - <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (pos == <span class="number">9</span>) &#123;</span><br><span class="line">                FOR(i, <span class="number">1</span>, mx + <span class="number">1</span>) &#123;</span><br><span class="line">                    pos = FIND(n - <span class="number">1</span> - i);</span><br><span class="line">                    <span class="keyword">if</span> (pos != <span class="number">9</span>) &#123;</span><br><span class="line">                        ADD(pos, curr);</span><br><span class="line">                        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; i &amp;&amp; reg[curr] &lt; n - <span class="number">1</span>; j++) ADD(curr, curr);</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> ((i != mx - <span class="number">1</span> || mx == <span class="number">2</span>) &amp;&amp; twice &amp;&amp; rising &gt; <span class="number">-1</span> &amp;&amp; rising &lt; <span class="number">9</span> &amp;&amp; rising != pos)</span><br><span class="line">                            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; mx &amp;&amp; reg[rising] &lt; n - <span class="number">1</span>; j++) ADD(rising, rising);</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                twice = !twice;</span><br><span class="line">                <span class="keyword">if</span> (twice &amp;&amp; nxt != <span class="number">9</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (!to_rise.size()) &#123;</span><br><span class="line">                        nxt++;</span><br><span class="line">                        FOR(i, <span class="number">0</span>, nxt - <span class="number">2</span>) to_rise.push(reg[nxt] + i * diff1);</span><br><span class="line">                    &#125;</span><br><span class="line">                    rising = FIND(to_rise.front());</span><br><span class="line">                    to_rise.pop();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    FOR(j, <span class="number">2</span>, <span class="number">2</span> * mx + <span class="number">3</span>) &#123;</span><br><span class="line">                        rising = FIND(n - j);</span><br><span class="line">                        <span class="keyword">if</span> (rising != <span class="number">9</span>) <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (rising != <span class="number">9</span>) &#123;</span><br><span class="line">                    ADD(rising, curr);</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; mx &amp;&amp; reg[curr] &lt; n - <span class="number">2</span>; i++) ADD(curr, curr);</span><br><span class="line">                    rising = curr;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">int</span> c = n;</span><br><span class="line">        FOR(i, <span class="number">0</span>, <span class="number">9</span>) &#123;</span><br><span class="line">            INIT(max(<span class="number">0</span>, c), i);</span><br><span class="line">            c -= mx * i + mx + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> nxt = <span class="number">1</span>, curr = <span class="number">-1</span>, rising = <span class="number">1</span>;</span><br><span class="line">        n++;</span><br><span class="line">        <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">            <span class="keyword">int</span> pos = FIND(n);</span><br><span class="line">            <span class="keyword">if</span> (pos == <span class="number">9</span>) &#123;</span><br><span class="line">                FOR(i, <span class="number">1</span>, mx + <span class="number">1</span>) &#123;</span><br><span class="line">                    pos = FIND(n - i);</span><br><span class="line">                    <span class="keyword">if</span> (pos != <span class="number">9</span>) &#123;</span><br><span class="line">                        ADD(pos, curr);</span><br><span class="line">                        FOR(j, <span class="number">1</span>, i) ADD(curr, curr);</span><br><span class="line">                        PRINT(curr);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (pos == rising &amp;&amp; nxt != <span class="number">8</span>) rising = ++nxt;</span><br><span class="line">                <span class="keyword">if</span> (~curr &amp;&amp; mx &amp;&amp; reg[rising] + mx &lt; n) &#123;</span><br><span class="line">                    ADD(rising, curr);</span><br><span class="line">                    FOR(i, <span class="number">1</span>, mx) ADD(curr, curr);</span><br><span class="line">                    rising = curr;</span><br><span class="line">                &#125;</span><br><span class="line">                PRINT(pos);</span><br><span class="line">                curr = pos;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/03/28/Unusual-types-of-graphs-with-cool-names/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -318,10 +413,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-03-17 18:20:42 / Modified: 20:14:23" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
+              <time title="Created: 2020-03-17 18:20:42" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-06 15:46:05" itemprop="dateModified" datetime="2020-04-06T15:46:05+02:00">2020-04-06</time>
+              </span>
 
           
   
@@ -362,7 +463,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Today, I’d like to share another really cool programming problem. This problem is <a href="https://oj.uz/problem/view/BOI15<sub>e</sub>di" target="_blank" rel="noopener">Editor</a> from the 2015 Baltic Olympiad in Informatics.</p>
+          <p>Today, I’d like to share another really cool programming problem. This problem is <a href="https://oj.uz/problem/view/BOI15<sub>e</sub>di" target="_blank" rel="noopener">Editor</a> from the 2015 Baltic Olympiad in Informatics.</p>
 <p>Here’s a quick summary of the problem: You’ve invented a text editor where there are 2 operations: <strong>edit</strong> and <strong>undo</strong>. Each operation has a <strong>level</strong>. A <strong>edit</strong> changes the editor state (initially 0) to some new state. An <strong>undo</strong> of <strong>level</strong> $L$ undoes the most recent operation with <strong>level</strong> strictly less than $L$. Note that an <strong>undo</strong> can undo a previous <strong>undo</strong>. Each <strong>edit</strong> has <strong>level</strong> 0 and the user determines the <strong>level</strong> of each <strong>undo</strong>. You’re now given a sequence of $N \leq 10^5$ operations. For each operation, you want to know the character shown on the screen after you apply it.</p>
 <p>For example, we can have the following sequence of operations (E means <strong>edit</strong>; U means <strong>undo</strong>):</p>
 <table>
@@ -464,7 +565,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-20 21:17:13" itemprop="dateModified" datetime="2020-03-20T21:17:13+02:00">2020-03-20</time>
+                <time title="Modified: 2020-04-06 15:46:09" itemprop="dateModified" datetime="2020-04-06T15:46:09+02:00">2020-04-06</time>
               </span>
 
           
@@ -506,7 +607,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Today, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is <a href="https://oj.uz/problem/view/JOI13_synchronization" target="_blank" rel="noopener">Synchronisation</a> from the 2013 Open Contest.</p>
+          <p>Today, I’d like to share a really cool problem I solved from the Japanese Olympiad in Informatics. This problem is <a href="https://oj.uz/problem/view/JOI13_synchronization" target="_blank" rel="noopener">Synchronisation</a> from the 2013 Open Contest.</p>
 <p>Here’s a quick summary of the problem: You have $N \leq 10^5$ computers and $N - 1$ connections that form a tree. Initially, all connections are inactive and all computers hold a single unique piece of information. Each time the connection between computers $A$ and $B$ is activated, the computers connected to $A$ and $B$ (including $A$ and $B$) sync up and share information. The states of the connections are changed $M \leq 10^5$ times and you would like to know how many unique pieces of information are stored on each computer at the end.</p>
 <p>There are many ways to solve this problem (I know of 4 distinct ways), but I’ll share what I think is the most elegant solution, which relies on more observations and has relatively light implementation.</p>
 <p>Let’s solve this problem subtask by subtask, just as we would in an actual competition!</p>
@@ -609,14 +710,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -675,12 +776,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">9k</span>
+    <span title="Symbols count total">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">8 mins.</span>
+    <span title="Reading time total">12 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>
