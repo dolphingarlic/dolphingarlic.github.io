@@ -20,21 +20,31 @@
     var CONFIG = {"hostname":"bits-and-bytes.me","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Afrikaans is a great language. It’s super easy to learn (There are no conjugations and there are only 3 tenses). It sounds great (unless the person speaking it has an Eastern Cape accent). But the thi">
+  <meta name="description" content="This post is basically a transcription of my YouTube video explaining Burnside’s lemma. Please consider watching and liking that video as well.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My favourite Afrikaans words">
-<meta property="og:url" content="http://bits-and-bytes.me/2020/04/10/My-favourite-Afrikaans-words/index.html">
+<meta property="og:title" content="Burnside&#39;s Lemma and Pizzas">
+<meta property="og:url" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/index.html">
 <meta property="og:site_name" content="Bits and Bytes">
-<meta property="og:description" content="Afrikaans is a great language. It’s super easy to learn (There are no conjugations and there are only 3 tenses). It sounds great (unless the person speaking it has an Eastern Cape accent). But the thi">
+<meta property="og:description" content="This post is basically a transcription of my YouTube video explaining Burnside’s lemma. Please consider watching and liking that video as well.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-10T13:37:00.000Z">
-<meta property="article:modified_time" content="2020-04-15T18:39:00.539Z">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/equal.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/orbit.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/fixed-point.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/result.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/bad-rotation.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/equiv.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/big-pizza-1.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/big-pizza-2.png">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/big-pizza-3.png">
+<meta property="article:published_time" content="2020-04-30T08:06:24.000Z">
+<meta property="article:modified_time" content="2020-04-30T08:52:38.893Z">
 <meta property="article:author" content="Andi Qu">
-<meta property="article:tag" content="Afrikaans">
-<meta property="article:tag" content="Random">
+<meta property="article:tag" content="Maths">
+<meta property="article:tag" content="Group theory">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/equal.png">
 
-<link rel="canonical" href="http://bits-and-bytes.me/2020/04/10/My-favourite-Afrikaans-words/">
+<link rel="canonical" href="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/">
 
 
 <script id="page-configurations">
@@ -47,7 +57,7 @@
   };
 </script>
 
-  <title>My favourite Afrikaans words | Bits and Bytes</title>
+  <title>Burnside's Lemma and Pizzas | Bits and Bytes</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114696886-4"></script>
     <script>
@@ -179,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/04/10/My-favourite-Afrikaans-words/">
+    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          My favourite Afrikaans words
+          Burnside's Lemma and Pizzas
         </h1>
 
         <div class="post-meta">
@@ -201,16 +211,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-04-10 15:37:00" itemprop="dateCreated datePublished" datetime="2020-04-10T15:37:00+02:00">2020-04-10</time>
+              <time title="Created: 2020-04-30 10:06:24 / Modified: 10:52:38" itemprop="dateCreated datePublished" datetime="2020-04-30T10:06:24+02:00">2020-04-30</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-15 20:39:00" itemprop="dateModified" datetime="2020-04-15T20:39:00+02:00">2020-04-15</time>
-              </span>
 
           
   
@@ -221,8 +225,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/04/10/My-favourite-Afrikaans-words/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/10/My-favourite-Afrikaans-words/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/04/30/Burnside-s-Lemma-and-Pizzas/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/30/Burnside-s-Lemma-and-Pizzas/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -232,14 +236,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.2k</span>
+              <span>3.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
+              <span>3 mins.</span>
             </span>
 
         </div>
@@ -251,20 +255,59 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Afrikaans is a great language. It’s super easy to learn (There are no conjugations and there are only 3 tenses). It sounds great (unless the person speaking it has an Eastern Cape accent). But the thing I like most about it is its vocabulary of funny and creative words that I sometimes wish are in the English language as well.</p>
-<p>Here is a list of words I find funny, creative, or anywhere in between.</p>
+        <p>This post is basically a transcription of my YouTube video explaining Burnside’s lemma. Please consider watching and liking that video as well.</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/AC8nYkHh1vE" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
 <a id="more"></a>
 
-<h2 id="Intensiewe-Vorm-Intensive-Form"><a href="#Intensiewe-Vorm-Intensive-Form" class="headerlink" title="Intensiewe Vorm (Intensive Form)"></a><em>Intensiewe Vorm</em> (Intensive Form)</h2><p><em>Intensiewe vorm</em> is for all the times when saying “very” simply does cut it. From “hemelsbreed” (“as wide as the sky”) to “skreeulelik” (“so ugly it makes you scream”), the possibilities are endless!</p>
-<p>This has many practical applications (like cutting down on your word count or making your Afrikaans teacher think you know your grammar), but there are a few ridiculous ones that either make no sense or have a very convoluted origin.</p>
-<p><strong>“komkommerkoel”</strong> - “as cool as a cucumber” (This one isn’t very ridiculous. I just found it funny that such an expression found its way into the language)<br><strong>“stoksielalleen”</strong> - “as alone as a soul on a pole” (The alternative expression for this is no better - “vingeralleen” means “as alone as a finger”)<br><strong>“spierwit”</strong> - “as white as muscle”<br><strong>“koeëlrond”</strong> - “as round as a bullet”</p>
-<h2 id="“Bakgat”-“Great”"><a href="#“Bakgat”-“Great”" class="headerlink" title="“Bakgat” (“Great”)"></a>“Bakgat” (“Great”)</h2><p>I really like how this word sounds. The hard consonants and the literal meaning (“basket hole”) make people think you’re swearing at them when you’re just calling them great.</p>
-<h2 id="“Bons”-“Bounce”"><a href="#“Bons”-“Bounce”" class="headerlink" title="“Bons” (“Bounce”)"></a>“Bons” (“Bounce”)</h2><p>Just as with “bakgat”, this word is just fun to say. Even the sound of the word is bouncy!</p>
-<h2 id="“Stokperdjie”-“Hobby”"><a href="#“Stokperdjie”-“Hobby”" class="headerlink" title="“Stokperdjie” (“Hobby”)"></a>“Stokperdjie” (“Hobby”)</h2><p>The literal meaning of this word is “stick horse”. I really like how aptly that describes what a hobby is.</p>
-<h2 id="Pretty-much-any-animal-insect-name"><a href="#Pretty-much-any-animal-insect-name" class="headerlink" title="Pretty much any animal/insect name"></a>Pretty much any animal/insect name</h2><p>I’ll let the words speak for themselves.</p>
-<p><strong>“skoenlapper”</strong> - “butterfly” (literally “shoe cloth”)<br><strong>“naaldekoker”</strong> - “dragonfly” (literally “nail tube”)<br><strong>“seekat”</strong> - “octopus” (literally “sea cat”)<br><strong>“kameelperd”</strong> - “giraffe” (literally “camel horse”)<br><strong>“perdeby”</strong> - “wasp” (literally “horse bee”)<br><strong>“spinnekop”</strong> - “spider” (literally “web head”)<br><strong>“ietermagog”</strong> - “pangolin”</p>
-<h2 id="Honourable-mention-diminutives-of-words-ending-with-“-tjie”"><a href="#Honourable-mention-diminutives-of-words-ending-with-“-tjie”" class="headerlink" title="Honourable mention - diminutives of words ending with “-tjie”"></a>Honourable mention - diminutives of words ending with “-tjie”</h2><p>Diminutives are when you add a suffix (usually “-tjie”) to a word to emphasize how small it is (e.g. “tafeltjie” means “little table”). However, when a word already ends with “-tjie”, you still have to add the suffix if you want to make it a diminutive.</p>
-<p>This leads to some… interesting results like “partytjietjie” (“little party”) and “baadjietjie” (“little blazer”). It feels quite unnatural saying them, but apparently it’s still perfectly good Afrikaans.</p>
+<h2 id="A-Pizza-Problem"><a href="#A-Pizza-Problem" class="headerlink" title="A Pizza Problem"></a>A Pizza Problem</h2><p>Imagine we’re making a pizza with 8 slices. If each slice must have exactly 1 of our 3 favourite toppings and 2 pizzas are considered the same if we can rotate one to get the other, how many distinct pizzas can we make?</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/equal.png" class="">
+
+<p>If we got rid of the rotation restriction, then the answer would simply be $3^8 = 6561$, since each slice is independent and has 3 possibilities. Clearly, the answer to the original problem is much less than 6561.</p>
+<p>One way to solve this is simply to draw out all 6561 possible pizzas and count the distinct ones, but that’s slow and boring. Let’s turn to a more mathematical approach.</p>
+<p>But first, some definitions. Let $X$ be the set of all 6561 possible pizzas and $G$ be the group of the 8 ways we can rotate the pizza (rotate by 0 slices, rotate by 1 slice, rotate by 2 slices, etc.)</p>
+<h2 id="Orbit"><a href="#Orbit" class="headerlink" title="Orbit"></a>Orbit</h2><p>For some pizza, consider the set of pizzas we can obtain from rotating it a number of slices. This set is called an orbit.</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/orbit.png" class="">
+
+<p>The orbit of pizza $x$ is written as $O_x$ and the orbits in the set of all possible pizzas is written as $X / G$.</p>
+<p>Notice how the number of distinct pizzas we can make is simply the number of orbits in the set of all possible pizzas.</p>
+<h2 id="Fixed-Point"><a href="#Fixed-Point" class="headerlink" title="Fixed Point"></a>Fixed Point</h2><p>A fixed point of a rotation is a pizza that still looks the same when rotated that amount.</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/fixed-point.png" class="">
+
+<p>The set of fixed points of a rotation $g$ is written as $X^g$.</p>
+<p>For instance, a fixed point of a rotation by 2 slices must have identical 1st, 3rd, 5th and 7th slices, as well as identical 2nd, 4th, 6th, and 8th slices.</p>
+<p>This means there are $3^2 = 9$ fixed points of a rotation by 2 slices.</p>
+<h2 id="Burnside’s-Lemma"><a href="#Burnside’s-Lemma" class="headerlink" title="Burnside’s Lemma"></a>Burnside’s Lemma</h2><p>Burnside’s lemma (aka Not-Burnside’s lemma) simply states that the number of orbits is equal to the average number of fixed points. It’s represented nicely by this formula:</p>
+<p>$$|X / G| = \frac{1}{|G|} \sum_{g \in G} |X^g|$$</p>
+<p>Applying Burnside’s lemma to our problem, we find that there are 834 distinct pizzas we can make. It’s like magic!</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/result.png" class="">
+
+<h2 id="Why-This-Works"><a href="#Why-This-Works" class="headerlink" title="Why This Works"></a>Why This Works</h2><p>Let’s call rotations of a pizza that produce the same pizza “bad rotations.”</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/bad-rotation.png" class="">
+
+<p>The set of all bad rotations of a pizza is called its stabilizer and is written as $G_x$ for pizza $x$.</p>
+<p>Notice how the total number of fixed points is equal to the total number of bad rotations since they’re essentially the same thing.</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/equiv.png" class="">
+
+<p>Now imagine for some pizza, we have a big pizza. The slices of the big pizza represent the small pizza rotated by 0 slices, then 1 slice, then 2 slices, and so on.</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/big-pizza-1.png" class="">
+
+<p>Notice how if we separate the big pizza into sectors where no two slices are the same, we get the orbits of the small pizza! (Since the big pizza is periodic).</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/big-pizza-2.png" class="">
+
+<p>The number of sectors we get is equal to the size of the stabilizer of the small pizza, so the product of the stabilizer size and orbit size of any pizza is equal to the size of the group of rotations.</p>
+<p>$$|G_x| \cdot |O_x| = |G|$$</p>
+<p>This result is known as the orbit-stabilizer theorem.</p>
+<p>After plugging everything into the equation, we find that the average number of fixed points is equal to the sum of 1 over the size of each pizza’s orbit.</p>
+<p>$$\begin{align*}\frac{1}{|G|} \sum_{g \in G}|X^g| &amp;= \frac{1}{|G|} \sum_{x \in X}|G_x|\\&amp;= \frac{1}{|G|} \sum_{x \in X}\frac{|G|}{|O_x|}\\&amp;= \sum_{x \in X}\frac{1}{|O_x|}\end{align*}$$</p>
+<p>But what is the sum of 1 over the size of each pizza’s orbit?</p>
+<p>Going back to our big pizza analogy, each smaller pizza in an orbit contributes 1 over that orbit’s size to the total sum, so the sum is therefore simply the number of orbits.</p>
+<img src="/2020/04/30/Burnside-s-Lemma-and-Pizzas/big-pizza-3.png" class="">
+
+<p>$$\sum_{y \in O_x}\frac{1}{|O_x|} = 1 \implies \sum_{x \in X}\frac{1}{|O_x|} = |X / G|$$</p>
+<p>Therefore, Burnside’s lemma is true.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>The cool thing about Burnside’s lemma is that you’re not limited to just rotations! Any finite group $G$ acting on a set $X$ works.</p>
+<p>Here’s a bonus problem: Instead of 8 slices and 3 toppings, find a formula for when there are $N$ slices and $M$ toppings.</p>
 
     </div>
 
@@ -274,8 +317,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Afrikaans/" rel="tag"># Afrikaans</a>
-              <a href="/tags/Random/" rel="tag"># Random</a>
+              <a href="/tags/Maths/" rel="tag"># Maths</a>
+              <a href="/tags/Group-theory/" rel="tag"># Group theory</a>
           </div>
 
         
@@ -284,13 +327,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/06/IOI-2003-Reverse/" rel="prev" title="IOI 2003 Reverse">
-      <i class="fa fa-chevron-left"></i> IOI 2003 Reverse
+    <a href="/2020/04/14/BkOI-2011-Timeismoney/" rel="prev" title="BkOI 2011 Timeismoney">
+      <i class="fa fa-chevron-left"></i> BkOI 2011 Timeismoney
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/04/14/BkOI-2011-Timeismoney/" rel="next" title="BkOI 2011 Timeismoney">
-      BkOI 2011 Timeismoney <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -356,7 +396,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Intensiewe-Vorm-Intensive-Form"><span class="nav-number">1.</span> <span class="nav-text">Intensiewe Vorm (Intensive Form)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“Bakgat”-“Great”"><span class="nav-number">2.</span> <span class="nav-text">“Bakgat” (“Great”)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“Bons”-“Bounce”"><span class="nav-number">3.</span> <span class="nav-text">“Bons” (“Bounce”)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“Stokperdjie”-“Hobby”"><span class="nav-number">4.</span> <span class="nav-text">“Stokperdjie” (“Hobby”)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pretty-much-any-animal-insect-name"><span class="nav-number">5.</span> <span class="nav-text">Pretty much any animal&#x2F;insect name</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Honourable-mention-diminutives-of-words-ending-with-“-tjie”"><span class="nav-number">6.</span> <span class="nav-text">Honourable mention - diminutives of words ending with “-tjie”</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Pizza-Problem"><span class="nav-number">1.</span> <span class="nav-text">A Pizza Problem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Orbit"><span class="nav-number">2.</span> <span class="nav-text">Orbit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fixed-Point"><span class="nav-number">3.</span> <span class="nav-text">Fixed Point</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Burnside’s-Lemma"><span class="nav-number">4.</span> <span class="nav-text">Burnside’s Lemma</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-This-Works"><span class="nav-number">5.</span> <span class="nav-text">Why This Works</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">6.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -489,6 +529,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
@@ -504,9 +597,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "http://bits-and-bytes.me/2020/04/10/My-favourite-Afrikaans-words/";
-    this.page.identifier = "2020/04/10/My-favourite-Afrikaans-words/";
-    this.page.title = "My favourite Afrikaans words";
+    this.page.url = "http://bits-and-bytes.me/2020/04/30/Burnside-s-Lemma-and-Pizzas/";
+    this.page.identifier = "2020/04/30/Burnside-s-Lemma-and-Pizzas/";
+    this.page.title = "Burnside's Lemma and Pizzas";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
