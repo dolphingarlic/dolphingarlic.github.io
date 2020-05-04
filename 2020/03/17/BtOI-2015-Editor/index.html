@@ -27,13 +27,15 @@
 <meta property="og:site_name" content="Bits and Bytes">
 <meta property="og:description" content="Today, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invented a text edi">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/graph.png">
 <meta property="article:published_time" content="2020-03-17T16:20:42.000Z">
-<meta property="article:modified_time" content="2020-04-15T18:39:18.831Z">
+<meta property="article:modified_time" content="2020-05-04T18:24:13.067Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="BtOI">
 <meta property="article:tag" content="Graphs">
 <meta property="article:tag" content="Binary lifting">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/graph.png">
 
 <link rel="canonical" href="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/">
 
@@ -210,7 +212,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-15 20:39:18" itemprop="dateModified" datetime="2020-04-15T20:39:18+02:00">2020-04-15</time>
+                <time title="Modified: 2020-05-04 20:24:13" itemprop="dateModified" datetime="2020-05-04T20:24:13+02:00">2020-05-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -266,7 +268,7 @@
 
       
         <p>Today, I’d like to share another really cool programming problem. This problem is <a href="https://oj.uz/problem/view/BOI15_edi" target="_blank" rel="noopener">Editor</a> from the 2015 Baltic Olympiad in Informatics.</p>
-<p>Here’s a quick summary of the problem: You’ve invented a text editor where there are 2 operations: <strong>edit</strong> and <strong>undo</strong>. Each operation has a <strong>level</strong>. A <strong>edit</strong> changes the editor state (initially 0) to some new state. An <strong>undo</strong> of <strong>level</strong> $L$ undoes the most recent operation with <strong>level</strong> strictly less than $L$. Note that an <strong>undo</strong> can undo a previous <strong>undo</strong>. Each <strong>edit</strong> has <strong>level</strong> 0 and the user determines the <strong>level</strong> of each <strong>undo</strong>. You’re now given a sequence of $N \leq 10^5$ operations. For each operation, you want to know the character shown on the screen after you apply it.</p>
+<p>Here’s a quick summary of the problem: You’ve invented a text editor where there are 2 operations: <strong>edit</strong> and <strong>undo</strong>. Each operation has a <strong>level</strong>. An <strong>edit</strong> changes the editor state (initially 0) to some new state. An <strong>undo</strong> of <strong>level</strong> $L$ undoes the most recent operation with <strong>level</strong> strictly less than $L$. Note that an <strong>undo</strong> can undo a previous <strong>undo</strong>. Each <strong>edit</strong> has <strong>level</strong> 0 and the user determines the <strong>level</strong> of each <strong>undo</strong>. You’re now given a sequence of $N \leq 10^5$ operations. For each operation, you want to know the editor state directly after you apply it.</p>
 <a id="more"></a>
 
 <p>For example, we can have the following sequence of operations (E means <strong>edit</strong>; U means <strong>undo</strong>):</p>
@@ -310,9 +312,7 @@
 <p>This observation is pretty obvious and doesn’t seem very helpful at first, but it will become useful later on.</p>
 <p>Before we move on though, view each operation as a node in a graph. If $Y$ undoes $X$, draw an edge between $Y$ and $X - 1$ and let $P_Y = X - 1$.</p>
 <p>Notice how the answer for $Y$ is simply the answer for $P_Y$. Additionally, our graph is a forest.</p>
-<p>For example, the graph for the above example would look like:</p>
-
-
+<p><img src="graph.png" alt="Graph from the above table"><span class="image-caption">Graph from the above table</span></p>
 <h2 id="Observation-2"><a href="#Observation-2" class="headerlink" title="Observation 2"></a>Observation 2</h2><p><strong>If $Y$ can’t undo $X$, then $Y$ can’t undo any operation in the range $(P_X, X]$.</strong></p>
 <p>This is because $P_X + 1$ is the most recent active operation $X$ could undo. The states of the operations in the range $(P_X, X]$ also remain unchanged after applying operation $X$, so by observation 1, this is true. (This still holds when we undo some operations.)</p>
 <h2 id="Observation-3"><a href="#Observation-3" class="headerlink" title="Observation 3"></a>Observation 3</h2><p><strong>By observation 2, the operation we undo must lie on some path from the most recent operation upwards!</strong></p>
