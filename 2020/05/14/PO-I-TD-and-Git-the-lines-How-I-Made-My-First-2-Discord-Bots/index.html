@@ -20,17 +20,22 @@
     var CONFIG = {"hostname":"bits-and-bytes.me","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Andi’s personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bits and Bytes">
-<meta property="og:url" content="http://bits-and-bytes.me/tags/Binary-lifting/index.html">
+  <meta name="description" content="I’ve recently made 2 Discord bots. PO(I)TD is a bot that sends a daily Olympiad Informatics (OI) problem and Git the lines is a bot that prints out GitHub&#x2F;GitLab snippets. Both bots are open-source an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PO(I)TD and Git the lines - How I Made My First 2 Discord Bots">
+<meta property="og:url" content="http://bits-and-bytes.me/2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/index.html">
 <meta property="og:site_name" content="Bits and Bytes">
-<meta property="og:description" content="Andi’s personal blog">
+<meta property="og:description" content="I’ve recently made 2 Discord bots. PO(I)TD is a bot that sends a daily Olympiad Informatics (OI) problem and Git the lines is a bot that prints out GitHub&#x2F;GitLab snippets. Both bots are open-source an">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-14T16:09:47.000Z">
+<meta property="article:modified_time" content="2020-05-14T17:17:02.857Z">
 <meta property="article:author" content="Andi Qu">
+<meta property="article:tag" content="Bots">
+<meta property="article:tag" content="Discord">
+<meta property="article:tag" content="GitHub">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://bits-and-bytes.me/tags/Binary-lifting/">
+<link rel="canonical" href="http://bits-and-bytes.me/2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/">
 
 
 <script id="page-configurations">
@@ -38,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tag: Binary lifting | Bits and Bytes</title>
+  <title>PO(I)TD and Git the lines - How I Made My First 2 Discord Bots | Bits and Bytes</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114696886-4"></script>
     <script>
@@ -168,77 +173,169 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Andi Qu">
+      <meta itemprop="description" content="Andi’s personal blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bits and Bytes">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PO(I)TD and Git the lines - How I Made My First 2 Discord Bots
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-05-14 18:09:47 / Modified: 19:17:02" itemprop="dateCreated datePublished" datetime="2020-05-14T18:09:47+02:00">2020-05-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming/Projects/" itemprop="url" rel="index"><span itemprop="name">Projects</span></a>
+                </span>
+            </span>
+
+          
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Binary lifting
-          <small>Tag</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>3 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
+        <p>I’ve recently made 2 Discord bots. <a href="https://github.com/dolphingarlic/PO-I-TD" target="_blank" rel="noopener">PO(I)TD</a> is a bot that sends a daily Olympiad Informatics (OI) problem and <a href="https://github.com/dolphingarlic/git-the-lines" target="_blank" rel="noopener">Git the lines</a> is a bot that prints out GitHub/GitLab snippets.</p>
+<p>Both bots are open-source and you can see their code <a href="https://github.com/dolphingarlic" target="_blank" rel="noopener">on GitHub</a></p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-17T18:20:42+02:00"
-              content="2020-03-17">
-          03-17
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/03/17/BtOI-2015-Editor/" itemprop="url">
-            <span itemprop="name">BtOI 2015 Editor</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-05T15:51:34+02:00"
-              content="2020-01-05">
-          01-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/01/05/JOI-2013-Synchronisation/" itemprop="url">
-            <span itemprop="name">JOI 2013 Synchronisation</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+<h2 id="PO-I-TD"><a href="#PO-I-TD" class="headerlink" title="PO(I)TD"></a>PO(I)TD</h2><p>PO(I)TD was my first Discord bot. The inspiration behind it was the <em>#potd</em> channel in a Discord server I’m in, which was a place where people could post daily challenges. The sad thing was that people didn’t post there very frequently, so it was more of a problem-of-the-month channel than anything.</p>
+<p>I also really enjoy solving OI problems. Before making this bot, I created <a href="https://apioipa.herokuapp.com/" target="_blank" rel="noopener">APIOIPA</a> - an <strong>API</strong> for <strong>OI</strong> <strong>P</strong>roblems <strong>A</strong>ssorted.</p>
+<p>These 2 things got me thinking - what if I could automate POTDs <em>and</em> use this API? Of course, I immediately thought of making a Discord bot.</p>
+<p>The bot was surprisingly easy to make. It only supported 1 command (<code>$gimme</code>) and it only had to do 1 other thing - get problems from my API. I hosted it on Heroku, added it to an OI server with some friends, made it give a problem every 24 hours, and everything went smoothly.</p>
+<p>That is, until the third day it had to give a problem.</p>
+<p>You see, PO(I)TD used to listen for <code>$start</code> and <code>$stop</code> commands to determine when it should start sending problems. This works fine if the script runs 24/7 and never restarts. However, Heroku restarts the script seemingly at random. This meant that I had to type <code>$start</code> every day for the bot to work, which was not ideal.</p>
+<p>That’s when I discovered <code>asyncio</code>.</p>
+<p>It was like magic - my bot could delay one command for several hours while other commands ran during that time. Using this, I simply made my bot sleep until midnight UTC each time the script started before starting the 24-hour problem-loop. This meant that no matter what, a problem would be sent at midnight UTC.</p>
+<p>That was a pretty fun project and a nice introduction to Discord bots for me.</p>
+<h2 id="Git-the-lines"><a href="#Git-the-lines" class="headerlink" title="Git the lines"></a>Git the lines</h2><p>Git the lines was my second and more useful bot. The idea for the bot came from <a href="https://aadibajpai.com/" target="_blank" rel="noopener">Aadi Bajpai</a> - a dev friend.</p>
+<p>Discord doesn’t print out GitHub snippets like other chat services like Slack. This is understandably quite annoying for devs on Discord and is a very-easy-to-solve but somehow unaddressed problem.</p>
+<p>This bot was also quite fun and easy to make - I just had to use regex and query from the GitHub API. I also added GitLab support because why not. What wasn’t fun though, was all the error handling.</p>
+<p>I’ve been told before that I should never trust raw user input. I had never found raw user input to be a problem until I made this bot. Within 2 hours of being added to one server, someone broke the bot by causing a runtime error.</p>
+<p>Here’s a few of the errors I had to deal with:</p>
+<ul>
+<li>Someone tried to print a 1000-line long snippet<ul>
+<li>This not only exceeded Discord’s character limit but also made my bot slow for a while</li>
+</ul>
+</li>
+<li>Someone tried to reference lines that didn’t exist<ul>
+<li>This caused indexing errors and was what originally crashed my bot</li>
+</ul>
+</li>
+<li>Someone tried to inject Markdown into the snippet to mention @everyone</li>
+<li>Someone tried to reference a blank line<ul>
+<li>This caused ugly and unexpected output, like the “code” just showing the file extension</li>
+</ul>
+</li>
+</ul>
+<p>However, fixing all these problems was worth it. Git the lines currently has 10 stars on GitHub and over 2500 users. I also learned some cool stuff from making this bot, such as the <code>aiohttp</code> library, how <code>asyncio</code> works, and how to use the GitHub API.</p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Bots/" rel="tag"># Bots</a>
+              <a href="/tags/Discord/" rel="tag"># Discord</a>
+              <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/30/Burnside-s-Lemma-and-Pizza/" rel="prev" title="Burnside's Lemma and Pizza">
+      <i class="fa fa-chevron-left"></i> Burnside's Lemma and Pizza
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -285,6 +382,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PO-I-TD"><span class="nav-number">1.</span> <span class="nav-text">PO(I)TD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-the-lines"><span class="nav-number">2.</span> <span class="nav-text">Git the lines</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -429,6 +527,26 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://bits-and-bytes.me/2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/";
+    this.page.identifier = "2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/";
+    this.page.title = "PO(I)TD and Git the lines - How I Made My First 2 Discord Bots";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://bits-and-bytes-1.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>

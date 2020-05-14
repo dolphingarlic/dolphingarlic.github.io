@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://bits-and-bytes.me/2020/04/14/BkOI-2011-Timeismoney/half-plane-line.png">
 <meta property="og:image" content="http://bits-and-bytes.me/2020/04/14/BkOI-2011-Timeismoney/line-shift.png">
 <meta property="article:published_time" content="2020-04-14T18:35:06.000Z">
-<meta property="article:modified_time" content="2020-05-04T18:21:38.568Z">
+<meta property="article:modified_time" content="2020-05-14T16:06:55.504Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="Graphs">
 <meta property="article:tag" content="BkOI">
@@ -216,7 +216,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-04 20:21:38" itemprop="dateModified" datetime="2020-05-04T20:21:38+02:00">2020-05-04</time>
+                <time title="Modified: 2020-05-14 18:06:55" itemprop="dateModified" datetime="2020-05-14T18:06:55+02:00">2020-05-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,7 +252,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>5.8k</span>
+              <span>5.9k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -289,11 +289,11 @@
 <h2 id="Observation-2"><a href="#Observation-2" class="headerlink" title="Observation 2"></a>Observation 2</h2><p><strong>“Hyperbolas are convex. What can we say about the points that can possibly be the optimal point?”</strong> - Not me again</p>
 <p>Since hyperbolas are convex and we want the hyperbola to be as close to the origin as possible, we only need to consider points on the lower convex hull! More specifically, we only need to consider the points on the convex hull between the point with the smallest $T$ and the point with the smallest $C$.</p>
 <p><img src="chull.png" alt="The lower convex hull"><span class="image-caption">The lower convex hull</span></p>
-<p>Since all $t_i$ and $c_i$ are small, this means that there are only about 50000 such points we need to check. Unfortunately though, we do not know what the points are, so we can’t just iterate through them.</p>
+<p>Since all $t_i$ and $c_i$ are small and there are $O(N^{2/3})$ points on the convex hull if all coordinates are less than $N$, this means that there are only $O((N \cdot T_{max})^{2/3}) \approx 1500$ such points we need to check. Unfortunately, though, we do not know what the points are, so we can’t just iterate through them.</p>
 <h2 id="Observation-3"><a href="#Observation-3" class="headerlink" title="Observation 3"></a>Observation 3</h2><p><strong>“Hyperbolas are inconvenient. What if we consider straight lines instead?”</strong> - Still not me</p>
 <p>Instead of considering $\sum t_i \cdot \sum c_i$, consider $\sum t_i + \sum c_i$. This is much more convenient for 2 reasons:</p>
 <ul>
-<li>Geometrically, this turns into a straight line/half plane.</li>
+<li>Geometrically, this turns into a straight line/half-plane.</li>
 <li>Instead of having 2 weights for each edge, we can now simply assign a single weight to each edge.</li>
 </ul>
 <p>Unfortunately, this does not get us 100 points.</p>
@@ -301,7 +301,7 @@
 <p>Observe that the point with smallest $T$ simply weights $T$ as 1 and $C$ as 0, and the point with smallest $C$ weights $T$ as 0 and $C$ as 1. Every other point on the convex hull between them is something in-between. Let the weight for $T$ be $a$ and the weight for $C$ be $b$.</p>
 <p>If we have $a$ and $b$, we can simply weight each edge as $a \cdot t_i + b \cdot c_i$ and then use any MST algorithm.</p>
 <p>What do the points where $a \cdot T + b \cdot C \leq K$ for some $a$, $b$, and $K$ look like? If we rearrange the elements, we get the inequality $T \leq -\frac{b}{a} \cdot C + \frac{K}{a}$.</p>
-<p>Notice how this is a half plane. Finding the minimum $K$ involves shifting the line define the half-plane to the left:</p>
+<p>Notice how this is a half-plane. Finding the minimum $K$ involves shifting the line defining the half-plane to the left:</p>
 <p><img src="half-plane-line.png" alt="Shifting the line defining the half-plane"><span class="image-caption">Shifting the line defining the half-plane</span></p>
 <h2 id="Observation-4"><a href="#Observation-4" class="headerlink" title="Observation 4"></a>Observation 4</h2><p><strong>“Rotating calipers?”</strong></p>
 <p>Imagine you take a ruler and touch it against the convex hull. If you rotate the ruler around the shape while making sure it keeps in contact, notice that the ruler touches each vertex of it at some point.</p>
@@ -312,7 +312,7 @@
 <p>Notice how if we draw the line between those 2 points and move the line to the left, it will touch every point between the 2 points, since the convex hull is… convex.</p>
 <p>Recall from observation 3 that finding the minimum $K$, given an initial $K$, $a$, and $b$ involves shifting the line to the left. Since the gradient of the line is simply $-\frac{b}{a}$ and we know the gradient since we know the 2 points, we can work out $a$ and $b$ and thus find the point where $a \cdot T + b \cdot C$ is minimised!</p>
 <p><img src="line-shift.png" alt="Shifting the line"><span class="image-caption">Shifting the line</span></p>
-<p>We can then recursively find all points between the first known point and this new point, and all points between this new point and the second known point. This lets us efficiently try out all points on the lower convex hull.</p>
+<p>We can then recursively find all points between the first known point and this new point, as well as all points between this new point and the second known point. This lets us efficiently try out all points on the lower convex hull.</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, x, y) for (int i = x; i &lt; y; i++)</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Line</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> u, v;</span><br><span class="line">    ll t, c, w;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(Line B) &#123; <span class="keyword">return</span> w &lt; B.w; &#125;</span><br><span class="line">&#125; lines[<span class="number">10000</span>];</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Point</span> &#123;</span> ll x, y; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">collinear</span><span class="params">(Point A, Point B, Point C)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (B.x - A.x) * (C.y - A.y) == (B.y - A.y) * (C.x - A.x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> cmp[<span class="number">200</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> A)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (A != cmp[A]) cmp[A] = cmp[cmp[A]], A = cmp[A];</span><br><span class="line">    <span class="keyword">return</span> A;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">onion</span><span class="params">(<span class="keyword">int</span> A, <span class="keyword">int</span> B)</span> </span>&#123; cmp[find(A)] = cmp[find(B)]; &#125;</span><br><span class="line"></span><br><span class="line">ll <span class="keyword">best_t</span> = INT_MAX, best_c = INT_MAX;</span><br><span class="line"><span class="built_in">vector</span>&lt;Line&gt; best_res;</span><br><span class="line"></span><br><span class="line"><span class="function">Point <span class="title">mst</span><span class="params">(ll dx, ll dy)</span> </span>&#123;</span><br><span class="line">    FOR(i, <span class="number">0</span>, m) lines[i].w = dy * lines[i].t + dx * lines[i].c;</span><br><span class="line">    sort(lines, lines + m);</span><br><span class="line">    iota(cmp, cmp + n, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    ll t = <span class="number">0</span>, c = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">vector</span>&lt;Line&gt; res;</span><br><span class="line">    FOR(i, <span class="number">0</span>, m) &#123;</span><br><span class="line">        <span class="keyword">if</span> (find(lines[i].u) != find(lines[i].v)) &#123;</span><br><span class="line">            t += lines[i].t;</span><br><span class="line">            c += lines[i].c;</span><br><span class="line">            onion(lines[i].u, lines[i].v);</span><br><span class="line">            res.push_back(lines[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (t * c &lt; <span class="keyword">best_t</span> * best_c) &#123;</span><br><span class="line">        <span class="keyword">best_t</span> = t, best_c = c;</span><br><span class="line">        best_res = res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;t, c&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">recurse</span><span class="params">(Point A, Point B)</span> </span>&#123;</span><br><span class="line">    Point C = mst(B.x - A.x, A.y - B.y);</span><br><span class="line">    <span class="keyword">if</span> (collinear(A, B, C)) <span class="keyword">return</span>;</span><br><span class="line">    recurse(A, C);</span><br><span class="line">    recurse(C, B);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    FOR(i, <span class="number">0</span>, m) <span class="built_in">cin</span> &gt;&gt; lines[i].u &gt;&gt; lines[i].v &gt;&gt; lines[i].t &gt;&gt; lines[i].c;</span><br><span class="line"></span><br><span class="line">    Point A = mst(<span class="number">0</span>, <span class="number">1</span>), B = mst(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">    recurse(A, B);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="keyword">best_t</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; best_c &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">for</span> (Line i : best_res) <span class="built_in">cout</span> &lt;&lt; i.u &lt;&lt; <span class="string">' '</span> &lt;&lt; i.v &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I really like this problem for 2 reasons.</p>
@@ -425,20 +425,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -488,12 +488,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">24k</span>
+    <span title="Symbols count total">27k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">22 mins.</span>
+    <span title="Reading time total">24 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
   </div>
