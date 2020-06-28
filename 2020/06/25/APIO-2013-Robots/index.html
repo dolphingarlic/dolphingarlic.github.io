@@ -28,7 +28,7 @@
 <meta property="og:description" content="I’m mainly writing this post because there isn’t any (good) editorial for APIO 2013 Robots online. In my opinion, it’s an okay problem, but it’s not particularly interesting. I’m not going to go over">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-25T18:01:46.000Z">
-<meta property="article:modified_time" content="2020-06-25T18:26:30.679Z">
+<meta property="article:modified_time" content="2020-06-28T15:41:05.985Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="DP">
 <meta property="article:tag" content="APIO">
@@ -201,10 +201,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-06-25 20:01:46 / Modified: 20:26:30" itemprop="dateCreated datePublished" datetime="2020-06-25T20:01:46+02:00">2020-06-25</time>
+              <time title="Created: 2020-06-25 20:01:46" itemprop="dateCreated datePublished" datetime="2020-06-25T20:01:46+02:00">2020-06-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-28 17:41:05" itemprop="dateModified" datetime="2020-06-28T17:41:05+02:00">2020-06-28</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -264,7 +270,7 @@
 
 <p>Firstly, notice that there are only 2 ways we can get an $(A, B)$ robot on square $(x, y)$. We can either merge an $(A, C)$ robot with a $(C + 1, B)$ robot or we can move an existing $(A, B)$ robot some number of moves to get to $(x, y)$.</p>
 <p>This gives us a basic DP formulation - let $dp[x][y][A][B]$ be the minimum number of moves to get an $A-B$ robot on square $(x, y)$.</p>
-<p>Initially, $dp[x_i][y_i][i][i] = 0$ for each $1 \leq i \leq N$ and $dp[x][y][A][B] = \inf$. We process the DP in increasing order of $B - A$.</p>
+<p>Initially, $dp[x_i][y_i][i][i] = 0$ for each $1 \leq i \leq N$ and $dp[x][y][A][B] = \infty$. We process the DP in increasing order of $B - A$.</p>
 <p>For each pair $(A, B)$, we first handle the first way we can form an $(A, B)$ robot. Simply iterate through each square $(x, y)$ and do</p>
 <p>$$dp[x][y][A][B] = \min_{A \leq C &lt; B}(dp[x][y][A][C] + dp[x][y][C + 1][B])$$</p>
 <p>This runs in $O(HWN^3)$ time.</p>
