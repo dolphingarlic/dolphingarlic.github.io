@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap/css?family=Open Sans:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="I’m mainly writing this post because there isn’t any (good) editorial for APIO 2013 Robots online. In my opinion, it’s an okay problem, but it’s not particularly interesting. I’m not going to go over">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-25T18:01:46.000Z">
-<meta property="article:modified_time" content="2020-06-28T15:41:05.985Z">
+<meta property="article:modified_time" content="2020-06-28T17:07:34.589Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="DP">
 <meta property="article:tag" content="APIO">
@@ -209,7 +209,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-06-28 17:41:05" itemprop="dateModified" datetime="2020-06-28T17:41:05+02:00">2020-06-28</time>
+                <time title="Modified: 2020-06-28 19:07:34" itemprop="dateModified" datetime="2020-06-28T19:07:34+02:00">2020-06-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -245,14 +245,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.8k</span>
+              <span>4k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>4 mins.</span>
             </span>
 
         </div>
@@ -268,14 +268,14 @@
 <p>I’m not going to go over the problem statement because it’s very long and complicated, so I’ll just trust that you’ve already read the problem.</p>
 <a id="more"></a>
 
-<p>Firstly, notice that there are only 2 ways we can get an $(A, B)$ robot on square $(x, y)$. We can either merge an $(A, C)$ robot with a $(C + 1, B)$ robot or we can move an existing $(A, B)$ robot some number of moves to get to $(x, y)$.</p>
-<p>This gives us a basic DP formulation - let $dp[x][y][A][B]$ be the minimum number of moves to get an $A-B$ robot on square $(x, y)$.</p>
+<p>Firstly, notice that there are only 2 ways we can get an $(A, B)$ robot on square $(x, y)$. We can either merge an $(A, C)$ robot with a $(C + 1, B)$ robot or we can push an existing $(A, B)$ robot on $(x’, y’)$ several times to get to $(x, y)$.</p>
+<p>This gives us a basic DP formulation - let $dp[x][y][A][B]$ be the minimum number of moves to get an $(A, B)$ robot on square $(x, y)$.</p>
 <p>Initially, $dp[x_i][y_i][i][i] = 0$ for each $1 \leq i \leq N$ and $dp[x][y][A][B] = \infty$. We process the DP in increasing order of $B - A$.</p>
+<p>First, do a DFS to find where a robot on square $(x, y)$ ends up if we push it in each of the 4 directions. This can be done in $O(HW)$ time and we only do it once - any robot pushed from the same square in the same direction will end up in the same end square.</p>
 <p>For each pair $(A, B)$, we first handle the first way we can form an $(A, B)$ robot. Simply iterate through each square $(x, y)$ and do</p>
 <p>$$dp[x][y][A][B] = \min_{A \leq C &lt; B}(dp[x][y][A][C] + dp[x][y][C + 1][B])$$</p>
 <p>This runs in $O(HWN^3)$ time.</p>
 <p>Next, we handle the second case.</p>
-<p>First, do a DFS to find where a robot on square $(x, y)$ ends up if we push it in each of the 4 directions. This can be done in $O(HW)$ time.</p>
 <p>At first, I thought of using Dijkstra, but that turned out to be just a bit too slow and only got me 60 points. Then I realized that since each push costs only 1 move, I could do a modified BFS.</p>
 <p>Notice how the maximum answer (assuming it exists) is at most $HW$. This means that instead of a priority queue, we can simply keep array of $HW$ queues acting as a big queue.</p>
 <p>Using this, we can effectively do BFS even with varying starting costs.</p>
@@ -446,7 +446,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">33k</span>
+    <span title="Symbols count total">34k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
