@@ -46,24 +46,26 @@
   };
 </script>
 
-  <meta name="description" content="Today, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invented a text edi">
+  <meta name="description" content="When I was studying differential equations, I didn’t think that Fourier analysis would be that useful, seeing how out-there it seemed at the time. Well, it turns out that they are really useful, espec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BtOI 2015 Editor">
-<meta property="og:url" content="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/index.html">
+<meta property="og:title" content="Fourier Series and Fourier Transforms">
+<meta property="og:url" content="http://bits-and-bytes.me/2022/06/11/Fourier-Series-and-Fourier-Transforms/index.html">
 <meta property="og:site_name" content="Bits and Bytes">
-<meta property="og:description" content="Today, I’d like to share another really cool programming problem. This problem is Editor from the 2015 Baltic Olympiad in Informatics. Here’s a quick summary of the problem: You’ve invented a text edi">
+<meta property="og:description" content="When I was studying differential equations, I didn’t think that Fourier analysis would be that useful, seeing how out-there it seemed at the time. Well, it turns out that they are really useful, espec">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/graph.png">
-<meta property="article:published_time" content="2020-03-17T16:20:42.000Z">
-<meta property="article:modified_time" content="2022-06-11T03:46:59.758Z">
+<meta property="og:image" content="http://bits-and-bytes.me/2022/06/11/Fourier-Series-and-Fourier-Transforms/convergence.gif">
+<meta property="og:image" content="http://bits-and-bytes.me/2022/06/11/Fourier-Series-and-Fourier-Transforms/fourier-transform.png">
+<meta property="article:published_time" content="2022-06-11T10:02:26.000Z">
+<meta property="article:modified_time" content="2022-06-11T20:59:42.378Z">
 <meta property="article:author" content="Andi Qu">
-<meta property="article:tag" content="BtOI">
-<meta property="article:tag" content="Graphs">
-<meta property="article:tag" content="Binary lifting">
+<meta property="article:tag" content="Differential Equations">
+<meta property="article:tag" content="Linear Algebra">
+<meta property="article:tag" content="Fourier Analysis">
+<meta property="article:tag" content="Maths">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/graph.png">
+<meta name="twitter:image" content="http://bits-and-bytes.me/2022/06/11/Fourier-Series-and-Fourier-Transforms/convergence.gif">
 
-<link rel="canonical" href="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/">
+<link rel="canonical" href="http://bits-and-bytes.me/2022/06/11/Fourier-Series-and-Fourier-Transforms/">
 
 
 <script id="page-configurations">
@@ -75,7 +77,7 @@
   };
 </script>
 
-  <title>BtOI 2015 Editor | Bits and Bytes</title>
+  <title>Fourier Series and Fourier Transforms | Bits and Bytes</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114696886-4"></script>
     <script>
@@ -201,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/">
+    <link itemprop="mainEntityOfPage" href="http://bits-and-bytes.me/2022/06/11/Fourier-Series-and-Fourier-Transforms/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -214,7 +216,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          BtOI 2015 Editor
+          Fourier Series and Fourier Transforms
         </h2>
 
         <div class="post-meta">
@@ -223,30 +225,24 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-03-17 18:20:42" itemprop="dateCreated datePublished" datetime="2020-03-17T18:20:42+02:00">2020-03-17</time>
+              <time title="Created: 2022-06-11 12:02:26 / Modified: 22:59:42" itemprop="dateCreated datePublished" datetime="2022-06-11T12:02:26+02:00">2022-06-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-11 05:46:59" itemprop="dateModified" datetime="2022-06-11T05:46:59+02:00">2022-06-11</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programming/" itemprop="url" rel="index">
-                    <span itemprop="name">Programming</span>
+                  <a href="/categories/Maths/" itemprop="url" rel="index">
+                    <span itemprop="name">Maths</span>
                   </a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programming/Olympiad/" itemprop="url" rel="index">
-                    <span itemprop="name">Olympiad</span>
+                  <a href="/categories/Maths/Differential-Equations/" itemprop="url" rel="index">
+                    <span itemprop="name">Differential Equations</span>
                   </a>
                 </span>
             </span>
@@ -260,8 +256,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2020/03/17/BtOI-2015-Editor/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/17/BtOI-2015-Editor/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2022/06/11/Fourier-Series-and-Fourier-Transforms/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/06/11/Fourier-Series-and-Fourier-Transforms/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -271,14 +267,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.6k</span>
+              <span>5.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
+              <span>5 mins.</span>
             </span>
 
         </div>
@@ -290,58 +286,57 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Today, I’d like to share another really cool programming problem. This problem is <a href="https://oj.uz/problem/view/BOI15_edi" target="_blank" rel="noopener">Editor</a> from the 2015 Baltic Olympiad in Informatics.</p>
-<p>Here’s a quick summary of the problem: You’ve invented a text editor where there are 2 operations: <strong>edit</strong> and <strong>undo</strong>. Each operation has a <strong>level</strong>. An <strong>edit</strong> changes the editor state (initially 0) to some new state. An <strong>undo</strong> of <strong>level</strong> $L$ undoes the most recent operation with <strong>level</strong> strictly less than $L$. Note that an <strong>undo</strong> can undo a previous <strong>undo</strong>. Each <strong>edit</strong> has <strong>level</strong> 0 and the user determines the <strong>level</strong> of each <strong>undo</strong>. You’re now given a sequence of $N \leq 10^5$ operations. For each operation, you want to know the editor state directly after you apply it.</p>
+        <p>When I was studying differential equations, I didn’t think that Fourier analysis would be <em>that</em> useful, seeing how out-there it seemed at the time. Well, it turns out that they are really useful, especially in signal processing and materials science. Let’s talk about them!</p>
 <a id="more"></a>
 
-<p>For example, we can have the following sequence of operations (E means <strong>edit</strong>; U means <strong>undo</strong>):</p>
-<table>
-<thead>
-<tr>
-<th align="center">Operation</th>
-<th align="center"></th>
-<th align="center">E<sub>1</sub></th>
-<th align="center">E<sub>2</sub></th>
-<th align="center">E<sub>5</sub></th>
-<th align="center">U<sub>1</sub></th>
-<th align="center">U<sub>1</sub></th>
-<th align="center">U<sub>3</sub></th>
-<th align="center">E<sub>4</sub></th>
-<th align="center">U<sub>2</sub></th>
-<th align="center">U<sub>1</sub></th>
-<th align="center">U<sub>1</sub></th>
-<th align="center">E<sub>1</sub></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Editor state</td>
-<td align="center">0</td>
-<td align="center">1</td>
-<td align="center">2</td>
-<td align="center">5</td>
-<td align="center">2</td>
-<td align="center">1</td>
-<td align="center">2</td>
-<td align="center">4</td>
-<td align="center">2</td>
-<td align="center">1</td>
-<td align="center">0</td>
-<td align="center">1</td>
-</tr>
-</tbody></table>
-<p>The official solution is a persistent trie of some sorts, but it’s long and complicated. Instead, I’ll present an elegant binary lifting solution.</p>
-<p>I’ll focus on <strong>undo</strong> operations in this post, since nothing really happens with <strong>edit</strong> operations other than outputting the answer.</p>
-<h2 id="Observation-1"><a href="#Observation-1" class="headerlink" title="Observation 1"></a>Observation 1</h2><p><strong>For 3 operations $X$, $Y$, $Z$ in order, if $Y$ can’t undo $X$ and $Z$ can’t undo $Y$, then $Z$ can’t undo $X$.</strong></p>
-<p>This observation is pretty obvious and doesn’t seem very helpful at first, but it will become useful later on.</p>
-<p>Before we move on though, view each operation as a node in a graph. If $Y$ undoes $X$, draw an edge between $Y$ and $X - 1$ and let $P_Y = X - 1$.</p>
-<p>Notice how the answer for $Y$ is simply the answer for $P_Y$. Additionally, our graph is a forest.</p>
-<p><img src="graph.png" alt="Graph from the above table"><span class="image-caption">Graph from the above table</span></p>
-<h2 id="Observation-2"><a href="#Observation-2" class="headerlink" title="Observation 2"></a>Observation 2</h2><p><strong>If $Y$ can’t undo $X$, then $Y$ can’t undo any operation in the range $(P_X, X]$.</strong></p>
-<p>This is because $P_X + 1$ is the most recent active operation $X$ could undo. The states of the operations in the range $(P_X, X]$ also remain unchanged after applying operation $X$, so by observation 1, this is true. (This still holds when we undo some operations.)</p>
-<h2 id="Observation-3"><a href="#Observation-3" class="headerlink" title="Observation 3"></a>Observation 3</h2><p><strong>By observation 2, the operation we undo must lie on some path from the most recent operation upwards!</strong></p>
-<p>We essentially want the most recent operation with level strictly less than the current <strong>undo</strong>. We can use suffix minimums and binary lifting to find this operation.</p>
-<p>The time complexity is $O(N \log N)$ and this gets us 100 points.</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, x, y) for (int i = x; i &lt; y; i++)</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> anc[<span class="number">300001</span>][<span class="number">20</span>], mn[<span class="number">300001</span>][<span class="number">20</span>], ans[<span class="number">300001</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            ans[i] = x;</span><br><span class="line">            anc[i][<span class="number">0</span>] = i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            x = -x;</span><br><span class="line">            <span class="keyword">int</span> curr = i - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">19</span>; ~j; j--) <span class="keyword">if</span> (mn[curr][j] &gt;= x) curr = anc[curr][j];</span><br><span class="line">            anc[i][<span class="number">0</span>] = curr - <span class="number">1</span>;</span><br><span class="line">            ans[i] = ans[curr - <span class="number">1</span>];</span><br><span class="line">            mn[i][<span class="number">0</span>] = x;</span><br><span class="line">            FOR(j, <span class="number">1</span>, <span class="number">20</span>) &#123;</span><br><span class="line">                anc[i][j] = anc[anc[i][j - <span class="number">1</span>]][j - <span class="number">1</span>];</span><br><span class="line">                mn[i][j] = min(mn[i][j - <span class="number">1</span>], mn[anc[i][j - <span class="number">1</span>]][j - <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>) <span class="built_in">cout</span> &lt;&lt; ans[i] &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Linear-Algebra-Review"><a href="#Linear-Algebra-Review" class="headerlink" title="Linear Algebra Review"></a>Linear Algebra Review</h1><p>The <strong>inner product</strong> (dot product) of two vectors is the sum of the pairwise products of their components:</p>
+<p>$$<br>a = [a_1, \dots, a_n], b = [b_1, \dots, b_n] \implies \langle a, b \rangle = a^Tb = \sum_{k = 1}^n a_kb_k<br>$$</p>
+<p>The inner product of $a$ and $b$ can be thought of as the component of $a$ projected onto $b$, multiplied by $b$’s length. From this, we can derive two important properties of the inner product:</p>
+<ul>
+<li>If the inner product of two vectors is 0, then they’re <strong>orthogonal</strong> to each other in $\mathbb{R}^n$.</li>
+<li>The inner product of a vector with itself is its length squared. If $\langle v, v \rangle = 1$, then we say that $v$ is <strong>normalized</strong></li>
+</ul>
+<p>Two normalized vectors that are orthogonal are called <strong>orthonormal</strong>. If we have $n$ orthonormal vectors $q_1, \dots, q_n$ in $\mathbb{R}^n$, then we say that those $n$ vectors form an <strong>orthonormal basis</strong>. That is, any vector $v$ in $\mathbb{R}^n$ can be written as a linear combination of those basis vectors: $v = \sum_{k = 1}^n c_kq_k$.</p>
+<p>The coefficients $c_k$ can be obtained by projecting $v$ onto $q_k$, which is an inner product, so we get $v = \sum_{k = 1}^n \langle v, q_k \rangle q_k$. If the basis vectors are just orthogonal but not normalized, then we also have to divide $c_k$ by $\langle q_k, q_k \rangle$.</p>
+<h2 id="Extending-it-to-Functions"><a href="#Extending-it-to-Functions" class="headerlink" title="Extending it to Functions"></a>Extending it to Functions</h2><p>A lot of the techniques that we use in linear algebra can be extended to work for functions and even infinite dimensions. For example, operators (used in quantum mechanics) are to functions as matrices are to vectors. As such, we can define the inner product of two functions $f$ and $g$ on the interval $[a, b]$ as:</p>
+<p>$$<br>\langle f, g \rangle = \int_a^b f(x)g(x)dx<br>$$</p>
+<p>(Note that this is just one definition of the inner product – we’ll use this one because it’s convenient).</p>
+<h1 id="Real-Fourier-Series"><a href="#Real-Fourier-Series" class="headerlink" title="Real Fourier Series"></a>Real Fourier Series</h1><p>Now, consider the interval $[-L, L]$ and functions of the form $\cos\left(\frac{k\pi x}{L}\right)$ and $\sin\left(\frac{k\pi x}{L}\right)$, where $k$ is a non-negative integer. If we plug these functions into our above definition of the inner product, we can see that they’re all orthogonal to each other. In fact, they form a basis for all continuous functions on the interval $[-L, L]$. How convenient!</p>
+<p>Because of this, we can approximate any such function $f$ as:</p>
+<p>$$<br>f(x) = \frac{a_0}{2} + \sum_{k = 1}^\infty a_k \cos\left(\frac{k\pi x}{L}\right) + b_k \sin\left(\frac{k\pi x}{L}\right)<br>$$</p>
+<p>Where the coefficients are calculated as:</p>
+<p>$$<br>\begin{cases}<br>a_k = \frac{1}{L} \int_{-L}^L f(x)\cos\left(\frac{k\pi x}{L}\right) dx\\<br>b_k = \frac{1}{L} \int_{-L}^L f(x)\sin\left(\frac{k\pi x}{L}\right) dx<br>\end{cases}<br>$$</p>
+<p>The reason why we divide $a_0$ by $2$ is that $\langle \cos\left(\frac{k\pi x}{L}\right), \cos\left(\frac{k\pi x}{L}\right) \rangle$ is $2L$ if $k = 0$ and $L$ if $k \neq 0$. Also, $b_0 = 0$, so we don’t show it in the equation.</p>
+<p>This works very well for all periodic functions with period $2L$, and it converges quite quickly too.</p>
+<p><img src="convergence.gif" alt="Animation of a partial Fourier series, courtesy of Wikipedia"><span class="image-caption">Animation of a partial Fourier series, courtesy of Wikipedia</span></p>
+<p>In the context of differential equations, this is useful for turning ugly input functions into sinusoids, which we can then solve using undetermined coefficients. Such a solution is called the <strong>formal Fourier series solution</strong> of the differential equation.</p>
+<h1 id="Complex-Fourier-Series"><a href="#Complex-Fourier-Series" class="headerlink" title="Complex Fourier Series"></a>Complex Fourier Series</h1><p>Since Euler’s formula ($e^{i\theta} = \cos \theta + i\sin \theta$) tells us how to relate sinusoids to complex exponentials, we can also express the Fourier series in terms of complex exponentials:</p>
+<p>$$<br>f(x) = \sum_{k = -\infty}^\infty c_k e^{i\omega kx}<br>$$</p>
+<p>Where $\omega = \frac{\pi}{L}$ is the angular frequency and $c_k$ is calculated as:</p>
+<p>$$<br>c_k = \frac{1}{2L} \int_{-L}^L f(x)e^{-i\omega kx} dx<br>$$</p>
+<p>This form is more compact and is used a lot in electrical engineering.</p>
+<h1 id="Fourier-Transforms"><a href="#Fourier-Transforms" class="headerlink" title="Fourier Transforms"></a>Fourier Transforms</h1><p>You may have noticed that in real Fourier series, the sinusoid coefficients are the same, while in complex Fourier series, we multiply by $e^{-i\omega kx}$ to get $c_k$ but then $e^{i\omega kx}$ to reconstruct $f$. This leads us to our next idea – the Fourier transform.</p>
+<p>The 1D Fourier transform $\hat f(k)$ of a function $f(x)$ is defined as:</p>
+<p>$$<br>\hat f(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty f(x)e^{-ikx}dx<br>$$</p>
+<p>While the inverse Fourier transform (i.e., getting from $\hat f(k)$ to $f(x)$) is defined as:</p>
+<p>$$<br>\hat f(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty \hat f(k)e^{ikx}dk<br>$$</p>
+<p>Note the difference in variables between the two functions.</p>
+<p>Essentially, the Fourier transform takes an input signal and tells us what frequencies it’s composed of. In other words, it converts the function from the <strong>time domain</strong> to the <strong>frequency domain</strong> (and the inverse does the opposite). It’s a bit like constructing the Fourier series, except with continuous frequencies instead of discrete ones.</p>
+<p><img src="fourier-transform.png" alt="Fourier transform of two unit pulses, courtesy of Wikipedia"><span class="image-caption">Fourier transform of two unit pulses, courtesy of Wikipedia</span></p>
+<p>I still don’t have much experience with Fourier transforms, but I know that it’s useful for:</p>
+<ul>
+<li>Quantum computing (Shor’s algorithm involves the quantum Fourier transform).</li>
+<li>Fast polynomial multiplication (FFTs are a whole class of algorithms).</li>
+<li>X-ray diffraction (reciprocal space is the 3D Fourier transform of real space).</li>
+<li>Nuclear magnetic resonance imaging (Fourier transform spectroscopy).</li>
+<li>Probably a lot of stuff in signal processing.</li>
+</ul>
+<p>Hopefully, I’ll learn more about applying this technique to solving problems soon!</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li>MIT OpenCourseWare. 2013. Electronic, Optical and Magnetic Properties of Materials. [ONLINE] Available at: <a href="https://ocw.mit.edu/courses/3-024-electronic-optical-and-magnetic-properties-of-materials-spring-2013/" target="_blank" rel="noopener">https://ocw.mit.edu/courses/3-024-electronic-optical-and-magnetic-properties-of-materials-spring-2013/</a>. [Accessed 9 June 2022].</li>
+<li>MIT 18.03 Ordinary Differential Equations. 2017. 18.03 Notes and Exercises. [ONLINE] Available at: <a href="https://math.mit.edu/~jorloff/suppnotes/suppnotes03/ASENotesAndExercises.html" target="_blank" rel="noopener">https://math.mit.edu/~jorloff/suppnotes/suppnotes03/ASENotesAndExercises.html</a>. [Accessed 6 June 2022].</li>
+<li>Wikipedia. 2022. Fourier series. [ONLINE] Available at: <a href="https://en.wikipedia.org/wiki/Fourier_series" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Fourier_series</a>. [Accessed 11 June 2022].</li>
+</ul>
 
     </div>
 
@@ -351,9 +346,10 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/BtOI/" rel="tag"># BtOI</a>
-              <a href="/tags/Graphs/" rel="tag"># Graphs</a>
-              <a href="/tags/Binary-lifting/" rel="tag"># Binary lifting</a>
+              <a href="/tags/Differential-Equations/" rel="tag"># Differential Equations</a>
+              <a href="/tags/Linear-Algebra/" rel="tag"># Linear Algebra</a>
+              <a href="/tags/Fourier-Analysis/" rel="tag"># Fourier Analysis</a>
+              <a href="/tags/Maths/" rel="tag"># Maths</a>
           </div>
 
         
@@ -362,13 +358,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/05/JOI-2013-Synchronisation/" rel="prev" title="JOI 2013 Synchronisation">
-      <i class="fa fa-chevron-left"></i> JOI 2013 Synchronisation
+    <a href="/2022/06/10/Hamiltonian-Mechanics-and-Phonons/" rel="prev" title="Hamiltonian Mechanics and Phonons">
+      <i class="fa fa-chevron-left"></i> Hamiltonian Mechanics and Phonons
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/03/28/Unusual-types-of-graphs-with-cool-names/" rel="next" title="Unusual types of graphs with cool names">
-      Unusual types of graphs with cool names <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -435,7 +428,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-1"><span class="nav-number">1.</span> <span class="nav-text">Observation 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-2"><span class="nav-number">2.</span> <span class="nav-text">Observation 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observation-3"><span class="nav-number">3.</span> <span class="nav-text">Observation 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">4.</span> <span class="nav-text">Code</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linear-Algebra-Review"><span class="nav-number">1.</span> <span class="nav-text">Linear Algebra Review</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Extending-it-to-Functions"><span class="nav-number">1.1.</span> <span class="nav-text">Extending it to Functions</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Real-Fourier-Series"><span class="nav-number">2.</span> <span class="nav-text">Real Fourier Series</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Complex-Fourier-Series"><span class="nav-number">3.</span> <span class="nav-text">Complex Fourier Series</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fourier-Transforms"><span class="nav-number">4.</span> <span class="nav-text">Fourier Transforms</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">5.</span> <span class="nav-text">References</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -653,9 +646,9 @@
       DISQUS.reset({
         reload: true,
         config: {page: {
-            url: "http://bits-and-bytes.me/2020/03/17/BtOI-2015-Editor/",
-            identifier: "2020/03/17/BtOI-2015-Editor/",
-            title: "BtOI 2015 Editor"
+            url: "http://bits-and-bytes.me/2022/06/11/Fourier-Series-and-Fourier-Transforms/",
+            identifier: "2022/06/11/Fourier-Series-and-Fourier-Transforms/",
+            title: "Fourier Series and Fourier Transforms"
           }
         }
       });

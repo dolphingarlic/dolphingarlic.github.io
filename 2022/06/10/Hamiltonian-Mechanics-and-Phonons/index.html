@@ -61,7 +61,7 @@
 <meta property="og:image" content="http://bits-and-bytes.me/2022/06/10/Hamiltonian-Mechanics-and-Phonons/optical.png">
 <meta property="og:image" content="http://bits-and-bytes.me/2022/06/10/Hamiltonian-Mechanics-and-Phonons/acoustic.png">
 <meta property="article:published_time" content="2022-06-10T20:00:07.000Z">
-<meta property="article:modified_time" content="2022-06-11T16:42:36.376Z">
+<meta property="article:modified_time" content="2022-06-11T19:05:05.576Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="Physics">
 <meta property="article:tag" content="Phonons">
@@ -236,7 +236,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-11 18:42:36" itemprop="dateModified" datetime="2022-06-11T18:42:36+02:00">2022-06-11</time>
+                <time title="Modified: 2022-06-11 21:05:05" itemprop="dateModified" datetime="2022-06-11T21:05:05+02:00">2022-06-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -276,7 +276,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>6.6k</span>
+              <span>7.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -296,10 +296,10 @@
 
       
         <p>I believe that this is the first unit of 3.033? The class is really interesting so far, and it’s really surprising to see how nanoscale properties influence the macroscopic properties of things. It’s also quite surprising how much physics and differential equations are involved, but I can’t say I wasn’t expecting this. After all, everything in this class’ name screams quantum mechanics.</p>
-<h1 id="Hamiltonian-Mechanics"><a href="#Hamiltonian-Mechanics" class="headerlink" title="Hamiltonian Mechanics"></a>Hamiltonian Mechanics</h1><p>In 8.01, we learnt that the energy of an object can be written as $E = \frac{mv^2}{2} + V$ where $m$, $v$, and $V$ are the mass, velocity, and potential energy of the object.</p>
-<p>Hamilton had the idea to rewrite the kinetic energy as $\frac{p^2}{2m}$ where $p$ is the momentum of the object. Hence, Hamiltonian mechanics was born. In fact, this rearrangement is so special that we don’t even use $E$ for energy anymore – we use $H$ instead (for “Hamiltonian”).</p>
 <a id="more"></a>
 
+<h1 id="Hamiltonian-Mechanics"><a href="#Hamiltonian-Mechanics" class="headerlink" title="Hamiltonian Mechanics"></a>Hamiltonian Mechanics</h1><p>In Newtonian mechanics, we learnt that the energy of an object can be written as $E = \frac{mv^2}{2} + V$ where $m$, $v$, and $V$ are the mass, velocity, and potential energy of the object.</p>
+<p>Hamilton had the idea to rewrite the kinetic energy as $\frac{p^2}{2m}$ where $p$ is the momentum of the object. Hence, Hamiltonian mechanics was born. In fact, this rearrangement is so special that we don’t even use $E$ for energy anymore – we use $H$ instead (for “Hamiltonian”).</p>
 <p>Wait, is there seriously a whole branch of mechanics named after a guy who rearranged one term of an equation? What’s so special about this form anyway? The usefulness of this form arises when we take the <strong>partial derivatives</strong> of $H$ with respect to $p$ and $x$:</p>
 <p>$$<br>\begin{cases}<br>\frac{\partial H}{\partial p} = \frac{p}{m} = v = \frac{dx}{dt}\\<br>\frac{\partial H}{\partial x} = \frac{dV}{dx} = -F = -\frac{dp}{dt}<br>\end{cases}<br>$$</p>
 <p>An unexpected symmetry arises – how cool is that? This symmetry is especially useful for solving spring-mass systems.</p>
@@ -344,6 +344,11 @@
 <p>At $k \approx 0$ on the acoustic branch, they move in the same direction, so the entire crystal appears to move as a whole as a result:</p>
 <p><img src="acoustic.png" alt="Acoustic branch movement"><span class="image-caption">Acoustic branch movement</span></p>
 <p>There’s a gap between the two branches – between $\omega = \sqrt{\frac{4G}{m}}$ and $\omega = \sqrt{\frac{4K}{m}}$. This gap is known as the <strong>phononic band gap</strong>, and it represents the range of wavelengths that can’t propagate through this material – it’s effectively soundproof to those frequencies!</p>
+<p>In general, periodicity leads to band gaps. This also applies to optical properties of materials, which we’ll see later.</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li>MIT Opencourseware. 2013. Electronic, Optical and Magnetic Properties of Materials. [ONLINE] Available at: <a href="https://ocw.mit.edu/courses/3-024-electronic-optical-and-magnetic-properties-of-materials-spring-2013/" target="_blank" rel="noopener">https://ocw.mit.edu/courses/3-024-electronic-optical-and-magnetic-properties-of-materials-spring-2013/</a>. [Accessed 9 June 2022].</li>
+<li>YouTube. 2013. Phonons. [ONLINE] Available at: <a href="https://youtu.be/M4WQs_U1nmU" target="_blank" rel="noopener">https://youtu.be/M4WQs_U1nmU</a>. [Accessed 10 June 2022].</li>
+</ul>
 
     </div>
 
@@ -366,7 +371,10 @@
     <a href="/2022/06/10/I-m-back/" rel="prev" title="I'm back!">
       <i class="fa fa-chevron-left"></i> I'm back!
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/06/11/Fourier-Series-and-Fourier-Transforms/" rel="next" title="Fourier Series and Fourier Transforms">
+      Fourier Series and Fourier Transforms <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -433,7 +441,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hamiltonian-Mechanics"><span class="nav-number">1.</span> <span class="nav-text">Hamiltonian Mechanics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Simple-Example-–-Two-Balls-and-a-Spring"><span class="nav-number">1.1.</span> <span class="nav-text">A Simple Example – Two Balls and a Spring</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Phonons-Lattice-Vibrations"><span class="nav-number">2.</span> <span class="nav-text">Phonons (Lattice Vibrations)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Monatomic-Case"><span class="nav-number">2.1.</span> <span class="nav-text">Monatomic Case</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Physical-Implications"><span class="nav-number">2.1.1.</span> <span class="nav-text">Physical Implications</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relation-to-Elastic-Modulus"><span class="nav-number">2.2.</span> <span class="nav-text">Relation to Elastic Modulus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diatomic-Case"><span class="nav-number">2.3.</span> <span class="nav-text">Diatomic Case</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Phononic-Band-Gap"><span class="nav-number">2.3.1.</span> <span class="nav-text">Phononic Band Gap</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hamiltonian-Mechanics"><span class="nav-number">1.</span> <span class="nav-text">Hamiltonian Mechanics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Simple-Example-–-Two-Balls-and-a-Spring"><span class="nav-number">1.1.</span> <span class="nav-text">A Simple Example – Two Balls and a Spring</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Phonons-Lattice-Vibrations"><span class="nav-number">2.</span> <span class="nav-text">Phonons (Lattice Vibrations)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Monatomic-Case"><span class="nav-number">2.1.</span> <span class="nav-text">Monatomic Case</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Physical-Implications"><span class="nav-number">2.1.1.</span> <span class="nav-text">Physical Implications</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relation-to-Elastic-Modulus"><span class="nav-number">2.2.</span> <span class="nav-text">Relation to Elastic Modulus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diatomic-Case"><span class="nav-number">2.3.</span> <span class="nav-text">Diatomic Case</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Phononic-Band-Gap"><span class="nav-number">2.3.1.</span> <span class="nav-text">Phononic Band Gap</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">3.</span> <span class="nav-text">References</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -447,20 +455,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -519,12 +527,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">41k</span>
+    <span title="Symbols count total">47k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">38 mins.</span>
+    <span title="Reading time total">43 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
   </div>
