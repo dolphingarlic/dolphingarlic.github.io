@@ -61,7 +61,7 @@
 <meta property="og:image" content="http://bits-and-bytes.me/2022/06/10/Hamiltonian-Mechanics-and-Phonons/optical.png">
 <meta property="og:image" content="http://bits-and-bytes.me/2022/06/10/Hamiltonian-Mechanics-and-Phonons/acoustic.png">
 <meta property="article:published_time" content="2022-06-10T20:00:07.000Z">
-<meta property="article:modified_time" content="2022-06-11T07:04:49.029Z">
+<meta property="article:modified_time" content="2022-06-11T16:42:36.376Z">
 <meta property="article:author" content="Andi Qu">
 <meta property="article:tag" content="Physics">
 <meta property="article:tag" content="Phonons">
@@ -236,7 +236,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-11 09:04:49" itemprop="dateModified" datetime="2022-06-11T09:04:49+02:00">2022-06-11</time>
+                <time title="Modified: 2022-06-11 18:42:36" itemprop="dateModified" datetime="2022-06-11T18:42:36+02:00">2022-06-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -276,7 +276,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>6.5k</span>
+              <span>6.6k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -328,10 +328,11 @@
 <li>When $k$ is very small, $\omega \approx \sqrt{\frac{K}{m}} ka$ and $v_g \approx \sqrt{\frac{K}{m}} a$ – the speed of sound is independent of frequency!</li>
 </ol>
 <h2 id="Relation-to-Elastic-Modulus"><a href="#Relation-to-Elastic-Modulus" class="headerlink" title="Relation to Elastic Modulus"></a>Relation to Elastic Modulus</h2><p>Did you know that a material’s elastic modulus (i.e., how squishy/stretchy it is) can be expressed in terms of its density and the speed of sound through it? This amazing fact can be shown with what we just derived.</p>
-<p>Consider a crystal where a force $F_{app}$ is acting on an area $A$ with $N$ bonds. The force compresses the crystal by $u$.</p>
-<p>The potential energy in each unit cell is $V(u) = \frac{K}{2}u^2$, so the magnitude of $F_{app}$ is $NKu$. Stress is defined as $\sigma = \frac{F_{app}}{A} = \frac{Ku}{a^2}$ since $A = Na^2$.</p>
+<p>Consider a crystal where a force $F$ is acting on an area $A$ with $N$ bonds. The force compresses the crystal by $u$.</p>
+<p>The potential energy in each unit cell is $V(u) = \frac{K}{2}u^2$, so the magnitude of $F$ is $NKu$. Stress is defined as $\sigma = \frac{F}{A} = \frac{Ku}{a^2}$ since $A = Na^2$.</p>
 <p>We also know $\sigma = E\varepsilon$ where $\varepsilon$ is the strain of the material. Since strain is the compression per bond length here (i.e., $\frac{u}{a}$), we get $E = \frac{K}{a}$.</p>
 <p>This means that $v_g = \sqrt{\frac{Ka^3}{m}} = \sqrt{\frac{E}{\rho}}$. Therefore, we get the relation $E = \rho v_g^2$.</p>
+<p>In real experiments, elastic modulus is measured by attaching a piezoelectric crystal to one end of the material and then measuring the time it takes for a sound excitation to reach the other end.</p>
 <h2 id="Diatomic-Case"><a href="#Diatomic-Case" class="headerlink" title="Diatomic Case"></a>Diatomic Case</h2><p>(Oops I kind of skimmed over this section’s maths, so it might be a bit incomplete). Imagine now we have two types of balls and springs, arranged in alternating order:</p>
 <p><img src="diatomic.png" alt="A 1D diatomic crystal"><span class="image-caption">A 1D diatomic crystal</span></p>
 <p>For simplicity, let’s assume $M = m$ and $K &gt; G$.</p>
