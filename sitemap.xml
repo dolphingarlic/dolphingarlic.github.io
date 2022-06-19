@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bits-and-bytes.me/2020/07/09/The-Dream-House-by-Craig-Higginson-Summary/</loc>
+    
+    <lastmod>2022-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://bits-and-bytes.me/2022/06/19/Corgi-Con-2022/</loc>
     
     <lastmod>2022-06-19</lastmod>
@@ -47,15 +56,6 @@
   </url>
   
   <url>
-    <loc>http://bits-and-bytes.me/2020/07/09/The-Dream-House-by-Craig-Higginson-Summary/</loc>
-    
-    <lastmod>2022-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://bits-and-bytes.me/2022/06/10/I-m-back/</loc>
     
     <lastmod>2022-06-11</lastmod>
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://bits-and-bytes.me/2020/03/28/Unusual-types-of-graphs-with-cool-names/</loc>
+    <loc>http://bits-and-bytes.me/2020/06/22/St0nks/</loc>
     
     <lastmod>2022-06-11</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://bits-and-bytes.me/2020/06/22/St0nks/</loc>
+    <loc>http://bits-and-bytes.me/2020/03/28/Unusual-types-of-graphs-with-cool-names/</loc>
     
     <lastmod>2022-06-11</lastmod>
     
@@ -331,20 +331,6 @@
   </url>
   
   <url>
-    <loc>http://bits-and-bytes.me/tags/POI/</loc>
-    <lastmod>2022-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Game-Theory/</loc>
-    <lastmod>2022-06-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://bits-and-bytes.me/tags/JOI/</loc>
     <lastmod>2022-06-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -367,6 +353,20 @@
   
   <url>
     <loc>http://bits-and-bytes.me/tags/GitHub/</loc>
+    <lastmod>2022-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/POI/</loc>
+    <lastmod>2022-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Game-Theory/</loc>
     <lastmod>2022-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -410,14 +410,14 @@
   </url>
   
   <url>
-    <loc>http://bits-and-bytes.me/categories/Maths/Differential-Equations/</loc>
+    <loc>http://bits-and-bytes.me/categories/Programming/Projects/</loc>
     <lastmod>2022-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://bits-and-bytes.me/categories/Programming/Projects/</loc>
+    <loc>http://bits-and-bytes.me/categories/Maths/Differential-Equations/</loc>
     <lastmod>2022-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
