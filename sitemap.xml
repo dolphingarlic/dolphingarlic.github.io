@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bits-and-bytes.me/2020/07/09/The-Dream-House-by-Craig-Higginson-Summary/</loc>
+    
+    <lastmod>2022-06-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/2022/06/27/Candide-a-Timeless-Vegan-Manifesto/</loc>
+    
+    <lastmod>2022-06-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://bits-and-bytes.me/2022/06/20/Quantum-Mechanics-But-With-Socks/</loc>
     
     <lastmod>2022-06-21</lastmod>
@@ -32,15 +50,6 @@
     <loc>http://bits-and-bytes.me/2022/06/15/How-tf-do-you-write-lowercase-xi/</loc>
     
     <lastmod>2022-06-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/2020/07/09/The-Dream-House-by-Craig-Higginson-Summary/</loc>
-    
-    <lastmod>2022-06-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -128,15 +137,6 @@
   </url>
   
   <url>
-    <loc>http://bits-and-bytes.me/2020/01/05/JOI-2013-Synchronisation/</loc>
-    
-    <lastmod>2022-06-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://bits-and-bytes.me/2020/04/10/My-favourite-Afrikaans-words/</loc>
     
     <lastmod>2022-06-11</lastmod>
@@ -147,6 +147,15 @@
   
   <url>
     <loc>http://bits-and-bytes.me/2020/05/14/PO-I-TD-and-Git-the-lines-How-I-Made-My-First-2-Discord-Bots/</loc>
+    
+    <lastmod>2022-06-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/2020/01/05/JOI-2013-Synchronisation/</loc>
     
     <lastmod>2022-06-11</lastmod>
     
@@ -193,7 +202,7 @@
 
   <url>
     <loc>http://bits-and-bytes.me/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -201,196 +210,196 @@
   
   <url>
     <loc>http://bits-and-bytes.me/tags/APIO/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/DP/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/BkOI/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Geometry/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Graphs/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/BtOI/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Binary-lifting/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Maths/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Group-theory/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Fun/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Random/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Corgis/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Physics/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Differential-Equations/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Linear-Algebra/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Fourier-Analysis/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Phonons/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/JOI/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/IOI/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Ad-hoc/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Afrikaans/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/POI/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Game-Theory/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Bots/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Discord/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/GitHub/</loc>
-    <lastmod>2022-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://bits-and-bytes.me/tags/Quantum-Mechanics/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/tags/Literature/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Differential-Equations/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Linear-Algebra/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Fourier-Analysis/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Physics/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Phonons/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/IOI/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Ad-hoc/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Afrikaans/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Bots/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Discord/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/GitHub/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/POI/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Game-Theory/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/Quantum-Mechanics/</loc>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/tags/JOI/</loc>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -399,49 +408,56 @@
   
   <url>
     <loc>http://bits-and-bytes.me/categories/Programming/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/categories/Programming/Olympiad/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://bits-and-bytes.me/categories/Literature/</loc>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/categories/Maths/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/categories/Materials-Science/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/categories/Programming/Projects/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/categories/Maths/Differential-Equations/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://bits-and-bytes.me/categories/Materials-Science/3-033/</loc>
-    <lastmod>2022-06-21</lastmod>
+    <lastmod>2022-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
